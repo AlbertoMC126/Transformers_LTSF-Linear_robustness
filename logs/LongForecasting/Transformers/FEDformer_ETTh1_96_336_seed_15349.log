@@ -1,0 +1,55 @@
+Args in experiment:
+Namespace(L=3, activation='gelu', base='legendre', batch_size=32, c_out=7, checkpoints='./checkpoints/', cross_activation='tanh', d_ff=2048, d_layers=1, d_model=512, data='ETTh1', data_path='ETTh1.csv', dec_in=7, des='Exp', devices='0,1', distil=True, do_predict=False, dropout=0.05, e_layers=2, embed='timeF', embed_type=0, enc_in=7, factor=3, features='M', freq='h', gpu=0, is_training=1, itr=1, label_len=48, learning_rate=0.0001, loss='mse', lradj='type1', mode_select='random', model='FEDformer', modes=64, moving_avg=[24], n_heads=8, num_workers=0, output_attention=False, patience=3, pred_len=336, root_path='../dataset', save_pred_values=False, seed=15349, seq_len=96, target='OT', task_id='ETTh1', train_epochs=10, use_amp=False, use_gpu=True, use_multi_gpu=False, version='Fourier')
+Use GPU: cuda:0
+fourier enhanced block used!
+modes=64, index=[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47]
+fourier enhanced block used!
+modes=64, index=[2, 8, 13, 18, 20, 21, 22, 28, 29, 33, 34, 35, 36, 37, 43, 46, 52, 54, 58, 70, 71, 73, 76, 77, 81, 88, 91, 92, 93, 96, 102, 103, 104, 106, 107, 108, 111, 112, 119, 122, 124, 125, 126, 128, 131, 133, 137, 140, 145, 147, 151, 153, 156, 157, 166, 167, 169, 174, 177, 182, 184, 185, 186, 187]
+ fourier enhanced cross attention used!
+modes_q=64, index_q=[3, 5, 7, 16, 18, 19, 20, 23, 25, 26, 28, 30, 36, 37, 38, 43, 47, 60, 63, 69, 70, 73, 77, 78, 84, 87, 92, 93, 94, 96, 97, 100, 104, 105, 106, 107, 109, 113, 118, 120, 124, 126, 127, 129, 131, 132, 136, 140, 141, 144, 146, 151, 154, 155, 156, 157, 159, 162, 164, 167, 179, 180, 181, 186]
+modes_kv=48, index_kv=[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47]
+enc_modes: 48, dec_modes: 64
+>>>>>>>start training : ETTh1_FEDformer_random_modes64_ETTh1_ftM_sl96_ll48_pl336_dm512_nh8_el2_dl1_df2048_fc3_ebtimeF_dtTrue_Exp_0_seed15349>>>>>>>>>>>>>>>>>>>>>>>>>>
+train 8209
+val 2545
+test 2545
+Total number of trainable parameters: 16303127
+Total number of parameters: 16303127
+Epoch: 1 cost time: 56.87427282333374
+Epoch: 1, Steps: 256 | Train Loss: 0.5329087 Vali Loss: 1.3283963 Test Loss: 0.4701943
+Validation loss decreased (inf --> 1.328396).  Saving model ...
+Updating learning rate to 0.0001
+Epoch: 2 cost time: 53.586623191833496
+Epoch: 2, Steps: 256 | Train Loss: 0.4872683 Vali Loss: 1.3086272 Test Loss: 0.4508186
+Validation loss decreased (1.328396 --> 1.308627).  Saving model ...
+Updating learning rate to 5e-05
+Epoch: 3 cost time: 53.41172409057617
+Epoch: 3, Steps: 256 | Train Loss: 0.4750212 Vali Loss: 1.3038073 Test Loss: 0.4495467
+Validation loss decreased (1.308627 --> 1.303807).  Saving model ...
+Updating learning rate to 2.5e-05
+Epoch: 4 cost time: 53.709736824035645
+Epoch: 4, Steps: 256 | Train Loss: 0.4705912 Vali Loss: 1.3024498 Test Loss: 0.4494524
+Validation loss decreased (1.303807 --> 1.302450).  Saving model ...
+Updating learning rate to 1.25e-05
+Epoch: 5 cost time: 53.42498564720154
+Epoch: 5, Steps: 256 | Train Loss: 0.4686240 Vali Loss: 1.2987206 Test Loss: 0.4472893
+Validation loss decreased (1.302450 --> 1.298721).  Saving model ...
+Updating learning rate to 6.25e-06
+Epoch: 6 cost time: 53.652873039245605
+Epoch: 6, Steps: 256 | Train Loss: 0.4675012 Vali Loss: 1.3032953 Test Loss: 0.4477154
+EarlyStopping counter: 1 out of 3
+Updating learning rate to 3.125e-06
+Epoch: 7 cost time: 53.36313986778259
+Epoch: 7, Steps: 256 | Train Loss: 0.4668517 Vali Loss: 1.2998914 Test Loss: 0.4457845
+EarlyStopping counter: 2 out of 3
+Updating learning rate to 1.5625e-06
+Epoch: 8 cost time: 53.730730295181274
+Epoch: 8, Steps: 256 | Train Loss: 0.4667279 Vali Loss: 1.2999504 Test Loss: 0.4471296
+EarlyStopping counter: 3 out of 3
+Early stopping
+Total training time: 468.4406 seconds
+>>>>>>>testing : ETTh1_FEDformer_random_modes64_ETTh1_ftM_sl96_ll48_pl336_dm512_nh8_el2_dl1_df2048_fc3_ebtimeF_dtTrue_Exp_0_seed15349<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+test 2545
+test shape: (79, 32, 336, 7) (79, 32, 336, 7)
+test shape: (2528, 336, 7) (2528, 336, 7)
+mse:0.447289377450943, mae:0.46035775542259216

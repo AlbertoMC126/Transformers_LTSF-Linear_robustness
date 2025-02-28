@@ -1,0 +1,70 @@
+Args in experiment:
+Namespace(activation='gelu', batch_size=32, c_out=7, checkpoints='./checkpoints/', d_ff=2048, d_layers=1, d_model=512, data='custom', data_path='exchange_rate.csv', dec_in=7, des='Exp', devices='0,1,2,3', distil=True, do_predict=False, dropout=0.05, e_layers=2, embed='timeF', embed_type=0, enc_in=8, factor=1, features='M', freq='h', gpu=0, individual=True, is_training=1, itr=1, label_len=48, learning_rate=0.0005, loss='mse', lradj='type1', model='NLinear', model_id='Exchange_336_720', moving_avg=25, n_heads=8, num_workers=0, output_attention=False, patience=5, pred_len=720, root_path='./dataset/', save_pred_values=False, seed=3144, seq_len=336, target='OT', test_flop=False, train_epochs=20, train_only=False, use_amp=False, use_gpu=False, use_multi_gpu=False)
+Use CPU
+>>>>>>>start training : Exchange_336_720_NLinear_custom_ftM_sl336_ll48_pl720_dm512_nh8_el2_dl1_df2048_fc1_ebtimeF_dtTrue_Exp_0_seed3144>>>>>>>>>>>>>>>>>>>>>>>>>>
+train 4256
+val 41
+test 798
+	iters: 100, epoch: 1 | loss: 0.7662951
+	speed: 0.0216s/iter; left time: 55.4443s
+Epoch: 1 cost time: 2.9033830165863037
+Epoch: 1, Steps: 133 | Train Loss: 0.7871852 Vali Loss: 1.2727785 Test Loss: 0.9259343
+Validation loss decreased (inf --> 1.272779).  Saving model ...
+Updating learning rate to 0.0005
+	iters: 100, epoch: 2 | loss: 0.7518379
+	speed: 0.0300s/iter; left time: 72.7718s
+Epoch: 2 cost time: 2.794473171234131
+Epoch: 2, Steps: 133 | Train Loss: 0.7680666 Vali Loss: 1.2524105 Test Loss: 0.9521914
+Validation loss decreased (1.272779 --> 1.252411).  Saving model ...
+Updating learning rate to 0.00025
+	iters: 100, epoch: 3 | loss: 0.7048003
+	speed: 0.0317s/iter; left time: 72.7833s
+Epoch: 3 cost time: 2.9634647369384766
+Epoch: 3, Steps: 133 | Train Loss: 0.7608438 Vali Loss: 1.2442905 Test Loss: 0.9574766
+Validation loss decreased (1.252411 --> 1.244290).  Saving model ...
+Updating learning rate to 0.000125
+	iters: 100, epoch: 4 | loss: 0.7937740
+	speed: 0.0301s/iter; left time: 65.1034s
+Epoch: 4 cost time: 2.7639002799987793
+Epoch: 4, Steps: 133 | Train Loss: 0.7574603 Vali Loss: 1.2269126 Test Loss: 0.9807017
+Validation loss decreased (1.244290 --> 1.226913).  Saving model ...
+Updating learning rate to 6.25e-05
+	iters: 100, epoch: 5 | loss: 0.8732354
+	speed: 0.0301s/iter; left time: 61.1276s
+Epoch: 5 cost time: 2.9050605297088623
+Epoch: 5, Steps: 133 | Train Loss: 0.7561750 Vali Loss: 1.1926259 Test Loss: 0.9759012
+Validation loss decreased (1.226913 --> 1.192626).  Saving model ...
+Updating learning rate to 3.125e-05
+	iters: 100, epoch: 6 | loss: 0.9367796
+	speed: 0.0293s/iter; left time: 55.5472s
+Epoch: 6 cost time: 2.656454563140869
+Epoch: 6, Steps: 133 | Train Loss: 0.7550963 Vali Loss: 1.2029994 Test Loss: 0.9862671
+EarlyStopping counter: 1 out of 5
+Updating learning rate to 1.5625e-05
+	iters: 100, epoch: 7 | loss: 0.7775587
+	speed: 0.0315s/iter; left time: 55.5587s
+Epoch: 7 cost time: 3.0054845809936523
+Epoch: 7, Steps: 133 | Train Loss: 0.7546581 Vali Loss: 1.2298377 Test Loss: 0.9804161
+EarlyStopping counter: 2 out of 5
+Updating learning rate to 7.8125e-06
+	iters: 100, epoch: 8 | loss: 0.7642609
+	speed: 0.0302s/iter; left time: 49.2057s
+Epoch: 8 cost time: 2.7307090759277344
+Epoch: 8, Steps: 133 | Train Loss: 0.7544275 Vali Loss: 1.2482471 Test Loss: 0.9816095
+EarlyStopping counter: 3 out of 5
+Updating learning rate to 3.90625e-06
+	iters: 100, epoch: 9 | loss: 0.6911509
+	speed: 0.0291s/iter; left time: 43.5000s
+Epoch: 9 cost time: 2.666853427886963
+Epoch: 9, Steps: 133 | Train Loss: 0.7543270 Vali Loss: 1.2310195 Test Loss: 0.9817261
+EarlyStopping counter: 4 out of 5
+Updating learning rate to 1.953125e-06
+	iters: 100, epoch: 10 | loss: 0.7707552
+	speed: 0.0278s/iter; left time: 37.8534s
+Epoch: 10 cost time: 2.6348369121551514
+Epoch: 10, Steps: 133 | Train Loss: 0.7542575 Vali Loss: 1.2104033 Test Loss: 0.9818271
+EarlyStopping counter: 5 out of 5
+Early stopping
+>>>>>>>testing : Exchange_336_720_NLinear_custom_ftM_sl336_ll48_pl720_dm512_nh8_el2_dl1_df2048_fc1_ebtimeF_dtTrue_Exp_0_seed3144<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+test 798
+mse:0.9772660732269287, mae:0.7249436974525452

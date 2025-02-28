@@ -1,0 +1,70 @@
+Args in experiment:
+Namespace(activation='gelu', batch_size=32, c_out=7, checkpoints='./checkpoints/', d_ff=2048, d_layers=1, d_model=512, data='custom', data_path='exchange_rate.csv', dec_in=7, des='Exp', devices='0,1,2,3', distil=True, do_predict=False, dropout=0.05, e_layers=2, embed='timeF', embed_type=0, enc_in=8, factor=1, features='M', freq='h', gpu=0, individual=True, is_training=1, itr=1, label_len=48, learning_rate=0.0005, loss='mse', lradj='type1', model='Linear', model_id='Exchange_336_336', moving_avg=25, n_heads=8, num_workers=0, output_attention=False, patience=5, pred_len=336, root_path='./dataset/', save_pred_values=False, seed=3293, seq_len=336, target='OT', test_flop=False, train_epochs=20, train_only=False, use_amp=False, use_gpu=False, use_multi_gpu=False)
+Use CPU
+>>>>>>>start training : Exchange_336_336_Linear_custom_ftM_sl336_ll48_pl336_dm512_nh8_el2_dl1_df2048_fc1_ebtimeF_dtTrue_Exp_0_seed3293>>>>>>>>>>>>>>>>>>>>>>>>>>
+train 4640
+val 425
+test 1182
+	iters: 100, epoch: 1 | loss: 0.3472365
+	speed: 0.0079s/iter; left time: 22.0795s
+Epoch: 1 cost time: 1.0322747230529785
+Epoch: 1, Steps: 145 | Train Loss: 0.4305769 Vali Loss: 1.6431562 Test Loss: 0.5174261
+Validation loss decreased (inf --> 1.643156).  Saving model ...
+Updating learning rate to 0.0005
+	iters: 100, epoch: 2 | loss: 0.4455416
+	speed: 0.0106s/iter; left time: 28.2679s
+Epoch: 2 cost time: 1.0933003425598145
+Epoch: 2, Steps: 145 | Train Loss: 0.3646996 Vali Loss: 1.3097501 Test Loss: 0.3863265
+Validation loss decreased (1.643156 --> 1.309750).  Saving model ...
+Updating learning rate to 0.00025
+	iters: 100, epoch: 3 | loss: 0.3628421
+	speed: 0.0144s/iter; left time: 36.0929s
+Epoch: 3 cost time: 1.3321490287780762
+Epoch: 3, Steps: 145 | Train Loss: 0.3535433 Vali Loss: 1.2309963 Test Loss: 0.4020175
+Validation loss decreased (1.309750 --> 1.230996).  Saving model ...
+Updating learning rate to 0.000125
+	iters: 100, epoch: 4 | loss: 0.3501827
+	speed: 0.0147s/iter; left time: 34.8205s
+Epoch: 4 cost time: 1.3379321098327637
+Epoch: 4, Steps: 145 | Train Loss: 0.3496642 Vali Loss: 1.2440517 Test Loss: 0.3706793
+EarlyStopping counter: 1 out of 5
+Updating learning rate to 6.25e-05
+	iters: 100, epoch: 5 | loss: 0.3033791
+	speed: 0.0138s/iter; left time: 30.6969s
+Epoch: 5 cost time: 1.1024587154388428
+Epoch: 5, Steps: 145 | Train Loss: 0.3474486 Vali Loss: 1.2148571 Test Loss: 0.3607442
+Validation loss decreased (1.230996 --> 1.214857).  Saving model ...
+Updating learning rate to 3.125e-05
+	iters: 100, epoch: 6 | loss: 0.3544867
+	speed: 0.0132s/iter; left time: 27.4627s
+Epoch: 6 cost time: 1.167403221130371
+Epoch: 6, Steps: 145 | Train Loss: 0.3467038 Vali Loss: 1.3032336 Test Loss: 0.3841131
+EarlyStopping counter: 1 out of 5
+Updating learning rate to 1.5625e-05
+	iters: 100, epoch: 7 | loss: 0.2938651
+	speed: 0.0141s/iter; left time: 27.1354s
+Epoch: 7 cost time: 1.3355059623718262
+Epoch: 7, Steps: 145 | Train Loss: 0.3461416 Vali Loss: 1.2466851 Test Loss: 0.3750011
+EarlyStopping counter: 2 out of 5
+Updating learning rate to 7.8125e-06
+	iters: 100, epoch: 8 | loss: 0.3531301
+	speed: 0.0155s/iter; left time: 27.6724s
+Epoch: 8 cost time: 1.3681433200836182
+Epoch: 8, Steps: 145 | Train Loss: 0.3457512 Vali Loss: 1.2398641 Test Loss: 0.3694760
+EarlyStopping counter: 3 out of 5
+Updating learning rate to 3.90625e-06
+	iters: 100, epoch: 9 | loss: 0.3004467
+	speed: 0.0151s/iter; left time: 24.7874s
+Epoch: 9 cost time: 1.363877296447754
+Epoch: 9, Steps: 145 | Train Loss: 0.3455713 Vali Loss: 1.2333083 Test Loss: 0.3685626
+EarlyStopping counter: 4 out of 5
+Updating learning rate to 1.953125e-06
+	iters: 100, epoch: 10 | loss: 0.3763538
+	speed: 0.0154s/iter; left time: 23.0321s
+Epoch: 10 cost time: 1.3833339214324951
+Epoch: 10, Steps: 145 | Train Loss: 0.3454747 Vali Loss: 1.2300551 Test Loss: 0.3688726
+EarlyStopping counter: 5 out of 5
+Early stopping
+>>>>>>>testing : Exchange_336_336_Linear_custom_ftM_sl336_ll48_pl336_dm512_nh8_el2_dl1_df2048_fc1_ebtimeF_dtTrue_Exp_0_seed3293<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+test 1182
+mse:0.3605680763721466, mae:0.45869240164756775

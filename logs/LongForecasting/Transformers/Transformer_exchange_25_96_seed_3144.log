@@ -1,0 +1,53 @@
+Args in experiment:
+Namespace(activation='gelu', batch_size=32, c_out=8, checkpoints='./checkpoints/', d_ff=2048, d_layers=1, d_model=512, data='custom', data_path='exchange_rate.csv', dec_in=8, des='Exp', devices='0,1,2,3', distil=True, do_predict=False, dropout=0.05, e_layers=2, embed='timeF', embed_type=0, enc_in=8, factor=3, features='M', freq='h', gpu=0, individual=False, is_training=1, itr=1, label_len=25, learning_rate=0.0001, loss='mse', lradj='type1', model='Transformer', model_id='exchange_96', moving_avg=25, n_heads=8, num_workers=0, output_attention=False, patience=3, pred_len=96, root_path='./dataset/', save_pred_values=False, seed=3144, seq_len=25, target='OT', test_flop=False, train_epochs=10, train_only=False, use_amp=False, use_gpu=True, use_multi_gpu=False)
+Use GPU: cuda:0
+>>>>>>>start training : exchange_96_Transformer_custom_ftM_sl25_ll25_pl96_dm512_nh8_el2_dl1_df2048_fc3_ebtimeF_dtTrue_Exp_0_seed3144>>>>>>>>>>>>>>>>>>>>>>>>>>
+train 5191
+data_set:  <data_provider.data_loader.Dataset_Custom object at 0x00000245C253F390>
+val 665
+data_set:  <data_provider.data_loader.Dataset_Custom object at 0x000002458FB34A20>
+test 1422
+data_set:  <data_provider.data_loader.Dataset_Custom object at 0x00000245C253FA90>
+Total number of trainable parameters: 10543624
+Total number of parameters: 10543624
+	iters: 100, epoch: 1 | loss: 0.0868782
+	speed: 0.0519s/iter; left time: 78.9768s
+Epoch: 1 cost time: 6.336585283279419
+Epoch: 1, Steps: 162 | Train Loss: 0.1328104 Vali Loss: 0.7030907 Test Loss: 0.6864676
+Validation loss decreased (inf --> 0.703091).  Saving model ...
+Updating learning rate to 0.0001
+	iters: 100, epoch: 2 | loss: 0.0624510
+	speed: 0.0366s/iter; left time: 49.7080s
+Epoch: 2 cost time: 2.973665952682495
+Epoch: 2, Steps: 162 | Train Loss: 0.0688946 Vali Loss: 0.6620690 Test Loss: 0.6194721
+Validation loss decreased (0.703091 --> 0.662069).  Saving model ...
+Updating learning rate to 5e-05
+	iters: 100, epoch: 3 | loss: 0.0494677
+	speed: 0.0362s/iter; left time: 43.3875s
+Epoch: 3 cost time: 3.0012946128845215
+Epoch: 3, Steps: 162 | Train Loss: 0.0530760 Vali Loss: 0.4975091 Test Loss: 0.5607609
+Validation loss decreased (0.662069 --> 0.497509).  Saving model ...
+Updating learning rate to 2.5e-05
+	iters: 100, epoch: 4 | loss: 0.0514749
+	speed: 0.0368s/iter; left time: 38.0744s
+Epoch: 4 cost time: 2.965756893157959
+Epoch: 4, Steps: 162 | Train Loss: 0.0462865 Vali Loss: 0.5486892 Test Loss: 0.5967511
+EarlyStopping counter: 1 out of 3
+Updating learning rate to 1.25e-05
+	iters: 100, epoch: 5 | loss: 0.0375535
+	speed: 0.0337s/iter; left time: 29.4173s
+Epoch: 5 cost time: 2.994285821914673
+Epoch: 5, Steps: 162 | Train Loss: 0.0431115 Vali Loss: 0.5702192 Test Loss: 0.6362922
+EarlyStopping counter: 2 out of 3
+Updating learning rate to 6.25e-06
+	iters: 100, epoch: 6 | loss: 0.0365339
+	speed: 0.0341s/iter; left time: 24.2204s
+Epoch: 6 cost time: 3.044621706008911
+Epoch: 6, Steps: 162 | Train Loss: 0.0413948 Vali Loss: 0.5575309 Test Loss: 0.6162870
+EarlyStopping counter: 3 out of 3
+Early stopping
+Total training time: 24.4726 seconds
+>>>>>>>testing : exchange_96_Transformer_custom_ftM_sl25_ll25_pl96_dm512_nh8_el2_dl1_df2048_fc3_ebtimeF_dtTrue_Exp_0_seed3144<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+test 1422
+data_set:  <data_provider.data_loader.Dataset_Custom object at 0x000002458FB345F8>
+mse:0.558919370174408, mae:0.6009378433227539

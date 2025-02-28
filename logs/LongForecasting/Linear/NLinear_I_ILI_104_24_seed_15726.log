@@ -1,0 +1,62 @@
+Args in experiment:
+Namespace(activation='gelu', batch_size=32, c_out=7, checkpoints='./checkpoints/', d_ff=2048, d_layers=1, d_model=512, data='custom', data_path='national_illness.csv', dec_in=7, des='Exp', devices='0,1,2,3', distil=True, do_predict=False, dropout=0.05, e_layers=2, embed='timeF', embed_type=0, enc_in=7, factor=1, features='M', freq='h', gpu=0, individual=True, is_training=1, itr=1, label_len=18, learning_rate=0.05, loss='mse', lradj='type1', model='NLinear', model_id='national_illness_104_24', moving_avg=25, n_heads=8, num_workers=0, output_attention=False, patience=5, pred_len=24, root_path='./dataset/', save_pred_values=False, seed=15726, seq_len=104, target='OT', test_flop=False, train_epochs=20, train_only=False, use_amp=False, use_gpu=False, use_multi_gpu=False)
+Use CPU
+>>>>>>>start training : national_illness_104_24_NLinear_custom_ftM_sl104_ll18_pl24_dm512_nh8_el2_dl1_df2048_fc1_ebtimeF_dtTrue_Exp_0_seed15726>>>>>>>>>>>>>>>>>>>>>>>>>>
+train 549
+val 74
+test 170
+Epoch: 1 cost time: 0.08300065994262695
+Epoch: 1, Steps: 17 | Train Loss: 2.6834976 Vali Loss: 0.7314069 Test Loss: 5.3423553
+Validation loss decreased (inf --> 0.731407).  Saving model ...
+Updating learning rate to 0.05
+Epoch: 2 cost time: 0.03899979591369629
+Epoch: 2, Steps: 17 | Train Loss: 1.1347463 Vali Loss: 0.6593980 Test Loss: 5.0853968
+Validation loss decreased (0.731407 --> 0.659398).  Saving model ...
+Updating learning rate to 0.025
+Epoch: 3 cost time: 0.029001951217651367
+Epoch: 3, Steps: 17 | Train Loss: 0.7226540 Vali Loss: 0.3423374 Test Loss: 3.2007763
+Validation loss decreased (0.659398 --> 0.342337).  Saving model ...
+Updating learning rate to 0.0125
+Epoch: 4 cost time: 0.02899956703186035
+Epoch: 4, Steps: 17 | Train Loss: 0.5048879 Vali Loss: 0.3058472 Test Loss: 2.7823696
+Validation loss decreased (0.342337 --> 0.305847).  Saving model ...
+Updating learning rate to 0.00625
+Epoch: 5 cost time: 0.026999711990356445
+Epoch: 5, Steps: 17 | Train Loss: 0.4274945 Vali Loss: 0.2866665 Test Loss: 2.6210082
+Validation loss decreased (0.305847 --> 0.286667).  Saving model ...
+Updating learning rate to 0.003125
+Epoch: 6 cost time: 0.02700018882751465
+Epoch: 6, Steps: 17 | Train Loss: 0.4189950 Vali Loss: 0.2856422 Test Loss: 2.6034200
+Validation loss decreased (0.286667 --> 0.285642).  Saving model ...
+Updating learning rate to 0.0015625
+Epoch: 7 cost time: 0.026999950408935547
+Epoch: 7, Steps: 17 | Train Loss: 0.4162304 Vali Loss: 0.2759192 Test Loss: 2.5992422
+Validation loss decreased (0.285642 --> 0.275919).  Saving model ...
+Updating learning rate to 0.00078125
+Epoch: 8 cost time: 0.026999950408935547
+Epoch: 8, Steps: 17 | Train Loss: 0.4130018 Vali Loss: 0.2704722 Test Loss: 2.5792286
+Validation loss decreased (0.275919 --> 0.270472).  Saving model ...
+Updating learning rate to 0.000390625
+Epoch: 9 cost time: 0.02700018882751465
+Epoch: 9, Steps: 17 | Train Loss: 0.4122753 Vali Loss: 0.2737501 Test Loss: 2.5775349
+EarlyStopping counter: 1 out of 5
+Updating learning rate to 0.0001953125
+Epoch: 10 cost time: 0.02700042724609375
+Epoch: 10, Steps: 17 | Train Loss: 0.4099610 Vali Loss: 0.2874172 Test Loss: 2.5820680
+EarlyStopping counter: 2 out of 5
+Updating learning rate to 9.765625e-05
+Epoch: 11 cost time: 0.026999950408935547
+Epoch: 11, Steps: 17 | Train Loss: 0.4026473 Vali Loss: 0.2735817 Test Loss: 2.5819750
+EarlyStopping counter: 3 out of 5
+Updating learning rate to 4.8828125e-05
+Epoch: 12 cost time: 0.02700018882751465
+Epoch: 12, Steps: 17 | Train Loss: 0.4104055 Vali Loss: 0.2791685 Test Loss: 2.5817196
+EarlyStopping counter: 4 out of 5
+Updating learning rate to 2.44140625e-05
+Epoch: 13 cost time: 0.026999711990356445
+Epoch: 13, Steps: 17 | Train Loss: 0.4024022 Vali Loss: 0.2833256 Test Loss: 2.5816274
+EarlyStopping counter: 5 out of 5
+Early stopping
+>>>>>>>testing : national_illness_104_24_NLinear_custom_ftM_sl104_ll18_pl24_dm512_nh8_el2_dl1_df2048_fc1_ebtimeF_dtTrue_Exp_0_seed15726<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+test 170
+mse:2.0021960735321045, mae:0.8636652827262878

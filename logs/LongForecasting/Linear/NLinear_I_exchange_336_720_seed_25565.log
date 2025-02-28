@@ -1,0 +1,70 @@
+Args in experiment:
+Namespace(activation='gelu', batch_size=32, c_out=7, checkpoints='./checkpoints/', d_ff=2048, d_layers=1, d_model=512, data='custom', data_path='exchange_rate.csv', dec_in=7, des='Exp', devices='0,1,2,3', distil=True, do_predict=False, dropout=0.05, e_layers=2, embed='timeF', embed_type=0, enc_in=8, factor=1, features='M', freq='h', gpu=0, individual=True, is_training=1, itr=1, label_len=48, learning_rate=0.0005, loss='mse', lradj='type1', model='NLinear', model_id='Exchange_336_720', moving_avg=25, n_heads=8, num_workers=0, output_attention=False, patience=5, pred_len=720, root_path='./dataset/', save_pred_values=False, seed=25565, seq_len=336, target='OT', test_flop=False, train_epochs=20, train_only=False, use_amp=False, use_gpu=False, use_multi_gpu=False)
+Use CPU
+>>>>>>>start training : Exchange_336_720_NLinear_custom_ftM_sl336_ll48_pl720_dm512_nh8_el2_dl1_df2048_fc1_ebtimeF_dtTrue_Exp_0_seed25565>>>>>>>>>>>>>>>>>>>>>>>>>>
+train 4256
+val 41
+test 798
+	iters: 100, epoch: 1 | loss: 0.7379995
+	speed: 0.0233s/iter; left time: 59.6409s
+Epoch: 1 cost time: 3.0172524452209473
+Epoch: 1, Steps: 133 | Train Loss: 0.7875730 Vali Loss: 1.2149011 Test Loss: 0.9465725
+Validation loss decreased (inf --> 1.214901).  Saving model ...
+Updating learning rate to 0.0005
+	iters: 100, epoch: 2 | loss: 0.6963251
+	speed: 0.0322s/iter; left time: 78.2339s
+Epoch: 2 cost time: 3.056489944458008
+Epoch: 2, Steps: 133 | Train Loss: 0.7674726 Vali Loss: 1.1995527 Test Loss: 0.9333537
+Validation loss decreased (1.214901 --> 1.199553).  Saving model ...
+Updating learning rate to 0.00025
+	iters: 100, epoch: 3 | loss: 0.8202223
+	speed: 0.0304s/iter; left time: 69.8650s
+Epoch: 3 cost time: 2.7804627418518066
+Epoch: 3, Steps: 133 | Train Loss: 0.7607542 Vali Loss: 1.2620628 Test Loss: 0.9655974
+EarlyStopping counter: 1 out of 5
+Updating learning rate to 0.000125
+	iters: 100, epoch: 4 | loss: 0.7323789
+	speed: 0.0316s/iter; left time: 68.4257s
+Epoch: 4 cost time: 3.000948905944824
+Epoch: 4, Steps: 133 | Train Loss: 0.7569593 Vali Loss: 1.2276859 Test Loss: 0.9536099
+EarlyStopping counter: 2 out of 5
+Updating learning rate to 6.25e-05
+	iters: 100, epoch: 5 | loss: 0.8183850
+	speed: 0.0304s/iter; left time: 61.6999s
+Epoch: 5 cost time: 2.8182506561279297
+Epoch: 5, Steps: 133 | Train Loss: 0.7558574 Vali Loss: 1.1943501 Test Loss: 0.9754024
+Validation loss decreased (1.199553 --> 1.194350).  Saving model ...
+Updating learning rate to 3.125e-05
+	iters: 100, epoch: 6 | loss: 0.8008847
+	speed: 0.0341s/iter; left time: 64.5704s
+Epoch: 6 cost time: 3.1121768951416016
+Epoch: 6, Steps: 133 | Train Loss: 0.7549160 Vali Loss: 1.2106564 Test Loss: 0.9815207
+EarlyStopping counter: 1 out of 5
+Updating learning rate to 1.5625e-05
+	iters: 100, epoch: 7 | loss: 0.6718608
+	speed: 0.0305s/iter; left time: 53.7628s
+Epoch: 7 cost time: 2.7379837036132812
+Epoch: 7, Steps: 133 | Train Loss: 0.7545254 Vali Loss: 1.2013537 Test Loss: 0.9805534
+EarlyStopping counter: 2 out of 5
+Updating learning rate to 7.8125e-06
+	iters: 100, epoch: 8 | loss: 0.7565840
+	speed: 0.0296s/iter; left time: 48.2106s
+Epoch: 8 cost time: 2.819819211959839
+Epoch: 8, Steps: 133 | Train Loss: 0.7542794 Vali Loss: 1.2092830 Test Loss: 0.9819091
+EarlyStopping counter: 3 out of 5
+Updating learning rate to 3.90625e-06
+	iters: 100, epoch: 9 | loss: 0.7920427
+	speed: 0.0304s/iter; left time: 45.4617s
+Epoch: 9 cost time: 2.877312660217285
+Epoch: 9, Steps: 133 | Train Loss: 0.7541276 Vali Loss: 1.2249663 Test Loss: 0.9822711
+EarlyStopping counter: 4 out of 5
+Updating learning rate to 1.953125e-06
+	iters: 100, epoch: 10 | loss: 0.6821101
+	speed: 0.0323s/iter; left time: 44.0542s
+Epoch: 10 cost time: 2.9893763065338135
+Epoch: 10, Steps: 133 | Train Loss: 0.7540750 Vali Loss: 1.2308354 Test Loss: 0.9824243
+EarlyStopping counter: 5 out of 5
+Early stopping
+>>>>>>>testing : Exchange_336_720_NLinear_custom_ftM_sl336_ll48_pl720_dm512_nh8_el2_dl1_df2048_fc1_ebtimeF_dtTrue_Exp_0_seed25565<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+test 798
+mse:0.9767488241195679, mae:0.7240788340568542

@@ -1,0 +1,59 @@
+Args in experiment:
+Namespace(L=3, activation='gelu', base='legendre', batch_size=32, c_out=7, checkpoints='./checkpoints/', cross_activation='tanh', d_ff=2048, d_layers=1, d_model=512, data='custom', data_path='national_illness.csv', dec_in=7, des='Exp', devices='0,1', distil=True, do_predict=False, dropout=0.05, e_layers=2, embed='timeF', embed_type=0, enc_in=7, factor=3, features='M', freq='h', gpu=0, is_training=1, itr=1, label_len=18, learning_rate=0.0001, loss='mse', lradj='type1', mode_select='random', model='FEDformer', modes=64, moving_avg=[24], n_heads=8, num_workers=0, output_attention=False, patience=3, pred_len=24, root_path='../dataset', save_pred_values=False, seed=3144, seq_len=36, target='OT', task_id='ili', train_epochs=10, use_amp=False, use_gpu=True, use_multi_gpu=False, version='Fourier')
+Use GPU: cuda:0
+fourier enhanced block used!
+modes=64, index=[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17]
+fourier enhanced block used!
+modes=64, index=[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20]
+ fourier enhanced cross attention used!
+modes_q=21, index_q=[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20]
+modes_kv=18, index_kv=[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17]
+enc_modes: 18, dec_modes: 21
+>>>>>>>start training : ili_FEDformer_random_modes64_custom_ftM_sl36_ll18_pl24_dm512_nh8_el2_dl1_df2048_fc3_ebtimeF_dtTrue_Exp_0_seed3144>>>>>>>>>>>>>>>>>>>>>>>>>>
+train 617
+val 74
+test 170
+Total number of trainable parameters: 12502039
+Total number of parameters: 12502039
+Epoch: 1 cost time: 4.203758478164673
+Epoch: 1, Steps: 19 | Train Loss: 1.0295431 Vali Loss: 0.6686005 Test Loss: 4.3464460
+Validation loss decreased (inf --> 0.668600).  Saving model ...
+Updating learning rate to 0.0001
+Epoch: 2 cost time: 0.7487695217132568
+Epoch: 2, Steps: 19 | Train Loss: 0.7484125 Vali Loss: 0.4462920 Test Loss: 3.6577423
+Validation loss decreased (0.668600 --> 0.446292).  Saving model ...
+Updating learning rate to 5e-05
+Epoch: 3 cost time: 0.7603321075439453
+Epoch: 3, Steps: 19 | Train Loss: 0.6268684 Vali Loss: 0.3675916 Test Loss: 3.4200559
+Validation loss decreased (0.446292 --> 0.367592).  Saving model ...
+Updating learning rate to 2.5e-05
+Epoch: 4 cost time: 0.7923493385314941
+Epoch: 4, Steps: 19 | Train Loss: 0.5986724 Vali Loss: 0.3319239 Test Loss: 3.3399568
+Validation loss decreased (0.367592 --> 0.331924).  Saving model ...
+Updating learning rate to 1.25e-05
+Epoch: 5 cost time: 0.7546615600585938
+Epoch: 5, Steps: 19 | Train Loss: 0.5802580 Vali Loss: 0.3412057 Test Loss: 3.2960343
+EarlyStopping counter: 1 out of 3
+Updating learning rate to 6.25e-06
+Epoch: 6 cost time: 0.7446045875549316
+Epoch: 6, Steps: 19 | Train Loss: 0.5699421 Vali Loss: 0.3171159 Test Loss: 3.2739472
+Validation loss decreased (0.331924 --> 0.317116).  Saving model ...
+Updating learning rate to 3.125e-06
+Epoch: 7 cost time: 0.7652842998504639
+Epoch: 7, Steps: 19 | Train Loss: 0.5688818 Vali Loss: 0.3280744 Test Loss: 3.2685752
+EarlyStopping counter: 1 out of 3
+Updating learning rate to 1.5625e-06
+Epoch: 8 cost time: 0.7435357570648193
+Epoch: 8, Steps: 19 | Train Loss: 0.5646568 Vali Loss: 0.3277077 Test Loss: 3.2646191
+EarlyStopping counter: 2 out of 3
+Updating learning rate to 7.8125e-07
+Epoch: 9 cost time: 0.7423782348632812
+Epoch: 9, Steps: 19 | Train Loss: 0.5622767 Vali Loss: 0.3362646 Test Loss: 3.2625251
+EarlyStopping counter: 3 out of 3
+Early stopping
+Total training time: 12.1857 seconds
+>>>>>>>testing : ili_FEDformer_random_modes64_custom_ftM_sl36_ll18_pl24_dm512_nh8_el2_dl1_df2048_fc3_ebtimeF_dtTrue_Exp_0_seed3144<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+test 170
+test shape: (5, 32, 24, 7) (5, 32, 24, 7)
+test shape: (160, 24, 7) (160, 24, 7)
+mse:3.273947238922119, mae:1.2585515975952148

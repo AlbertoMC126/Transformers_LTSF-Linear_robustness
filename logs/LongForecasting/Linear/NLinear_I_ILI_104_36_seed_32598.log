@@ -1,0 +1,54 @@
+Args in experiment:
+Namespace(activation='gelu', batch_size=32, c_out=7, checkpoints='./checkpoints/', d_ff=2048, d_layers=1, d_model=512, data='custom', data_path='national_illness.csv', dec_in=7, des='Exp', devices='0,1,2,3', distil=True, do_predict=False, dropout=0.05, e_layers=2, embed='timeF', embed_type=0, enc_in=7, factor=1, features='M', freq='h', gpu=0, individual=True, is_training=1, itr=1, label_len=18, learning_rate=0.05, loss='mse', lradj='type1', model='NLinear', model_id='national_illness_104_36', moving_avg=25, n_heads=8, num_workers=0, output_attention=False, patience=5, pred_len=36, root_path='./dataset/', save_pred_values=False, seed=32598, seq_len=104, target='OT', test_flop=False, train_epochs=20, train_only=False, use_amp=False, use_gpu=False, use_multi_gpu=False)
+Use CPU
+>>>>>>>start training : national_illness_104_36_NLinear_custom_ftM_sl104_ll18_pl36_dm512_nh8_el2_dl1_df2048_fc1_ebtimeF_dtTrue_Exp_0_seed32598>>>>>>>>>>>>>>>>>>>>>>>>>>
+train 537
+val 62
+test 158
+Epoch: 1 cost time: 0.029999494552612305
+Epoch: 1, Steps: 16 | Train Loss: 3.2685184 Vali Loss: 0.8838412 Test Loss: 7.2708769
+Validation loss decreased (inf --> 0.883841).  Saving model ...
+Updating learning rate to 0.05
+Epoch: 2 cost time: 0.02700042724609375
+Epoch: 2, Steps: 16 | Train Loss: 1.3983409 Vali Loss: 0.5031618 Test Loss: 3.2737126
+Validation loss decreased (0.883841 --> 0.503162).  Saving model ...
+Updating learning rate to 0.025
+Epoch: 3 cost time: 0.03850984573364258
+Epoch: 3, Steps: 16 | Train Loss: 0.7456149 Vali Loss: 0.4076453 Test Loss: 3.2529938
+Validation loss decreased (0.503162 --> 0.407645).  Saving model ...
+Updating learning rate to 0.0125
+Epoch: 4 cost time: 0.026999950408935547
+Epoch: 4, Steps: 16 | Train Loss: 0.5686475 Vali Loss: 0.2886911 Test Loss: 2.5538483
+Validation loss decreased (0.407645 --> 0.288691).  Saving model ...
+Updating learning rate to 0.00625
+Epoch: 5 cost time: 0.02700185775756836
+Epoch: 5, Steps: 16 | Train Loss: 0.4884153 Vali Loss: 0.2780349 Test Loss: 2.0732160
+Validation loss decreased (0.288691 --> 0.278035).  Saving model ...
+Updating learning rate to 0.003125
+Epoch: 6 cost time: 0.02700018882751465
+Epoch: 6, Steps: 16 | Train Loss: 0.4546273 Vali Loss: 0.2440868 Test Loss: 1.9829566
+Validation loss decreased (0.278035 --> 0.244087).  Saving model ...
+Updating learning rate to 0.0015625
+Epoch: 7 cost time: 0.026999473571777344
+Epoch: 7, Steps: 16 | Train Loss: 0.4548923 Vali Loss: 0.2511539 Test Loss: 1.9272219
+EarlyStopping counter: 1 out of 5
+Updating learning rate to 0.00078125
+Epoch: 8 cost time: 0.026000022888183594
+Epoch: 8, Steps: 16 | Train Loss: 0.4540080 Vali Loss: 0.2593317 Test Loss: 1.9192162
+EarlyStopping counter: 2 out of 5
+Updating learning rate to 0.000390625
+Epoch: 9 cost time: 0.02700042724609375
+Epoch: 9, Steps: 16 | Train Loss: 0.4623378 Vali Loss: 0.2830367 Test Loss: 1.9275573
+EarlyStopping counter: 3 out of 5
+Updating learning rate to 0.0001953125
+Epoch: 10 cost time: 0.0319972038269043
+Epoch: 10, Steps: 16 | Train Loss: 0.4481230 Vali Loss: 0.2575642 Test Loss: 1.9298384
+EarlyStopping counter: 4 out of 5
+Updating learning rate to 9.765625e-05
+Epoch: 11 cost time: 0.032000064849853516
+Epoch: 11, Steps: 16 | Train Loss: 0.4521167 Vali Loss: 0.2528166 Test Loss: 1.9281881
+EarlyStopping counter: 5 out of 5
+Early stopping
+>>>>>>>testing : national_illness_104_36_NLinear_custom_ftM_sl104_ll18_pl36_dm512_nh8_el2_dl1_df2048_fc1_ebtimeF_dtTrue_Exp_0_seed32598<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+test 158
+mse:1.965961217880249, mae:0.8869593143463135

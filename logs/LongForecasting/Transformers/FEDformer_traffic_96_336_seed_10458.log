@@ -1,0 +1,51 @@
+Args in experiment:
+Namespace(L=3, activation='gelu', base='legendre', batch_size=32, c_out=862, checkpoints='./checkpoints/', cross_activation='tanh', d_ff=2048, d_layers=1, d_model=512, data='custom', data_path='traffic.csv', dec_in=862, des='Exp', devices='0,1', distil=True, do_predict=False, dropout=0.05, e_layers=2, embed='timeF', embed_type=0, enc_in=862, factor=3, features='M', freq='h', gpu=0, is_training=1, itr=1, label_len=48, learning_rate=0.0001, loss='mse', lradj='type1', mode_select='random', model='FEDformer', modes=64, moving_avg=[24], n_heads=8, num_workers=0, output_attention=False, patience=3, pred_len=336, root_path='../dataset', save_pred_values=False, seed=10458, seq_len=96, target='OT', task_id='traffic', train_epochs=10, use_amp=False, use_gpu=True, use_multi_gpu=False, version='Fourier')
+Use GPU: cuda:0
+fourier enhanced block used!
+modes=64, index=[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47]
+fourier enhanced block used!
+modes=64, index=[3, 5, 7, 14, 18, 19, 23, 29, 31, 33, 36, 38, 41, 46, 48, 55, 57, 58, 59, 62, 65, 66, 68, 69, 71, 72, 73, 74, 75, 84, 87, 90, 95, 98, 101, 103, 107, 112, 113, 121, 122, 128, 129, 130, 132, 134, 139, 141, 143, 144, 148, 159, 160, 163, 164, 166, 168, 177, 178, 180, 181, 182, 185, 190]
+ fourier enhanced cross attention used!
+modes_q=64, index_q=[1, 4, 6, 8, 11, 14, 17, 18, 21, 22, 24, 25, 31, 33, 34, 36, 38, 39, 40, 47, 49, 50, 55, 57, 62, 65, 71, 76, 80, 81, 82, 83, 85, 87, 95, 97, 99, 100, 101, 104, 121, 123, 124, 125, 126, 128, 129, 136, 139, 140, 148, 149, 152, 155, 156, 163, 164, 166, 170, 171, 173, 184, 185, 186]
+modes_kv=48, index_kv=[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47]
+enc_modes: 48, dec_modes: 64
+>>>>>>>start training : traffic_FEDformer_random_modes64_custom_ftM_sl96_ll48_pl336_dm512_nh8_el2_dl1_df2048_fc3_ebtimeF_dtTrue_Exp_0_seed10458>>>>>>>>>>>>>>>>>>>>>>>>>>
+train 11849
+val 1421
+test 3173
+Total number of trainable parameters: 20681582
+Total number of parameters: 20681582
+Epoch: 1 cost time: 100.63991594314575
+Epoch: 1, Steps: 370 | Train Loss: 0.4246982 Vali Loss: 0.4894783 Test Loss: 0.6319773
+Validation loss decreased (inf --> 0.489478).  Saving model ...
+Updating learning rate to 0.0001
+Epoch: 2 cost time: 97.06536626815796
+Epoch: 2, Steps: 370 | Train Loss: 0.2894316 Vali Loss: 0.4773773 Test Loss: 0.6367406
+Validation loss decreased (0.489478 --> 0.477377).  Saving model ...
+Updating learning rate to 5e-05
+Epoch: 3 cost time: 97.06245160102844
+Epoch: 3, Steps: 370 | Train Loss: 0.2704917 Vali Loss: 0.4720467 Test Loss: 0.6238816
+Validation loss decreased (0.477377 --> 0.472047).  Saving model ...
+Updating learning rate to 2.5e-05
+Epoch: 4 cost time: 97.42791056632996
+Epoch: 4, Steps: 370 | Train Loss: 0.2628104 Vali Loss: 0.4697274 Test Loss: 0.6267043
+Validation loss decreased (0.472047 --> 0.469727).  Saving model ...
+Updating learning rate to 1.25e-05
+Epoch: 5 cost time: 97.04557847976685
+Epoch: 5, Steps: 370 | Train Loss: 0.2589903 Vali Loss: 0.4703538 Test Loss: 0.6308222
+EarlyStopping counter: 1 out of 3
+Updating learning rate to 6.25e-06
+Epoch: 6 cost time: 96.88499665260315
+Epoch: 6, Steps: 370 | Train Loss: 0.2570304 Vali Loss: 0.4713999 Test Loss: 0.6281643
+EarlyStopping counter: 2 out of 3
+Updating learning rate to 3.125e-06
+Epoch: 7 cost time: 97.03995513916016
+Epoch: 7, Steps: 370 | Train Loss: 0.2560544 Vali Loss: 0.4704093 Test Loss: 0.6286467
+EarlyStopping counter: 3 out of 3
+Early stopping
+Total training time: 800.6887 seconds
+>>>>>>>testing : traffic_FEDformer_random_modes64_custom_ftM_sl96_ll48_pl336_dm512_nh8_el2_dl1_df2048_fc3_ebtimeF_dtTrue_Exp_0_seed10458<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+test 3173
+test shape: (99, 32, 336, 862) (99, 32, 336, 862)
+test shape: (3168, 336, 862) (3168, 336, 862)
+mse:0.6267058253288269, mae:0.3895076513290405

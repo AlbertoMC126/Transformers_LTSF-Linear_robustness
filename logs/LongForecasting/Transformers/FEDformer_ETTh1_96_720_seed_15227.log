@@ -1,0 +1,47 @@
+Args in experiment:
+Namespace(L=3, activation='gelu', base='legendre', batch_size=32, c_out=7, checkpoints='./checkpoints/', cross_activation='tanh', d_ff=2048, d_layers=1, d_model=512, data='ETTh1', data_path='ETTh1.csv', dec_in=7, des='Exp', devices='0,1', distil=True, do_predict=False, dropout=0.05, e_layers=2, embed='timeF', embed_type=0, enc_in=7, factor=3, features='M', freq='h', gpu=0, is_training=1, itr=1, label_len=48, learning_rate=0.0001, loss='mse', lradj='type1', mode_select='random', model='FEDformer', modes=64, moving_avg=[24], n_heads=8, num_workers=0, output_attention=False, patience=3, pred_len=720, root_path='../dataset', save_pred_values=False, seed=15227, seq_len=96, target='OT', task_id='ETTh1', train_epochs=10, use_amp=False, use_gpu=True, use_multi_gpu=False, version='Fourier')
+Use GPU: cuda:0
+fourier enhanced block used!
+modes=64, index=[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47]
+fourier enhanced block used!
+modes=64, index=[5, 37, 42, 47, 57, 62, 63, 65, 66, 78, 79, 81, 82, 87, 92, 108, 109, 118, 131, 132, 134, 141, 142, 151, 155, 157, 163, 179, 181, 184, 185, 187, 199, 204, 209, 214, 215, 217, 218, 224, 231, 232, 249, 262, 265, 270, 272, 273, 274, 286, 292, 296, 308, 309, 310, 329, 334, 335, 342, 348, 349, 360, 366, 368]
+ fourier enhanced cross attention used!
+modes_q=64, index_q=[9, 11, 18, 28, 34, 52, 55, 56, 62, 65, 66, 67, 72, 79, 80, 103, 117, 119, 122, 131, 134, 137, 147, 154, 162, 167, 192, 194, 195, 199, 204, 215, 216, 226, 231, 237, 238, 242, 243, 244, 253, 257, 271, 274, 276, 280, 283, 289, 291, 308, 310, 316, 320, 321, 328, 335, 340, 342, 352, 356, 361, 362, 368, 380]
+modes_kv=48, index_kv=[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47]
+enc_modes: 48, dec_modes: 64
+>>>>>>>start training : ETTh1_FEDformer_random_modes64_ETTh1_ftM_sl96_ll48_pl720_dm512_nh8_el2_dl1_df2048_fc3_ebtimeF_dtTrue_Exp_0_seed15227>>>>>>>>>>>>>>>>>>>>>>>>>>
+train 7825
+val 2161
+test 2161
+Total number of trainable parameters: 16303127
+Total number of parameters: 16303127
+Epoch: 1 cost time: 78.35545325279236
+Epoch: 1, Steps: 244 | Train Loss: 0.6524706 Vali Loss: 1.5748169 Test Loss: 0.4888886
+Validation loss decreased (inf --> 1.574817).  Saving model ...
+Updating learning rate to 0.0001
+Epoch: 2 cost time: 75.11653184890747
+Epoch: 2, Steps: 244 | Train Loss: 0.5985920 Vali Loss: 1.5801846 Test Loss: 0.4843897
+EarlyStopping counter: 1 out of 3
+Updating learning rate to 5e-05
+Epoch: 3 cost time: 75.06873059272766
+Epoch: 3, Steps: 244 | Train Loss: 0.5897151 Vali Loss: 1.5617157 Test Loss: 0.4710334
+Validation loss decreased (1.574817 --> 1.561716).  Saving model ...
+Updating learning rate to 2.5e-05
+Epoch: 4 cost time: 75.13979172706604
+Epoch: 4, Steps: 244 | Train Loss: 0.5858809 Vali Loss: 1.5638317 Test Loss: 0.4678368
+EarlyStopping counter: 1 out of 3
+Updating learning rate to 1.25e-05
+Epoch: 5 cost time: 75.1830849647522
+Epoch: 5, Steps: 244 | Train Loss: 0.5839366 Vali Loss: 1.5649542 Test Loss: 0.4685132
+EarlyStopping counter: 2 out of 3
+Updating learning rate to 6.25e-06
+Epoch: 6 cost time: 75.16246771812439
+Epoch: 6, Steps: 244 | Train Loss: 0.5828271 Vali Loss: 1.5618411 Test Loss: 0.4704183
+EarlyStopping counter: 3 out of 3
+Early stopping
+Total training time: 490.0278 seconds
+>>>>>>>testing : ETTh1_FEDformer_random_modes64_ETTh1_ftM_sl96_ll48_pl720_dm512_nh8_el2_dl1_df2048_fc3_ebtimeF_dtTrue_Exp_0_seed15227<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+test 2161
+test shape: (67, 32, 720, 7) (67, 32, 720, 7)
+test shape: (2144, 720, 7) (2144, 720, 7)
+mse:0.4710334241390228, mae:0.48730534315109253

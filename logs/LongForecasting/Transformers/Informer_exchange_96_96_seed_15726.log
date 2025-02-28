@@ -1,0 +1,70 @@
+Args in experiment:
+Namespace(activation='gelu', batch_size=32, c_out=8, checkpoints='./checkpoints/', d_ff=2048, d_layers=1, d_model=512, data='custom', data_path='exchange_rate.csv', dec_in=8, des='Exp', devices='0,1,2,3', distil=True, do_predict=False, dropout=0.05, e_layers=2, embed='timeF', embed_type=0, enc_in=8, factor=3, features='M', freq='h', gpu=0, individual=False, is_training=1, itr=1, label_len=48, learning_rate=0.0001, loss='mse', lradj='type1', model='Informer', model_id='exchange_96', moving_avg=25, n_heads=8, num_workers=0, output_attention=False, patience=3, pred_len=96, root_path='./dataset/', seed=15726, seq_len=96, target='OT', test_flop=False, train_epochs=10, train_only=False, use_amp=False, use_gpu=True, use_multi_gpu=False)
+Use GPU: cuda:0
+>>>>>>>start training : exchange_96_Informer_custom_ftM_sl96_ll48_pl96_dm512_nh8_el2_dl1_df2048_fc3_ebtimeF_dtTrue_Exp_0_seed15726>>>>>>>>>>>>>>>>>>>>>>>>>>
+train 5120
+val 665
+test 1422
+	iters: 100, epoch: 1 | loss: 0.1325038
+	speed: 0.0584s/iter; left time: 87.6762s
+Epoch: 1 cost time: 7.500757217407227
+Epoch: 1, Steps: 160 | Train Loss: 0.1686070 Vali Loss: 1.1123489 Test Loss: 0.9684878
+Validation loss decreased (inf --> 1.112349).  Saving model ...
+Updating learning rate to 0.0001
+	iters: 100, epoch: 2 | loss: 0.0887815
+	speed: 0.0527s/iter; left time: 70.6761s
+Epoch: 2 cost time: 4.417226314544678
+Epoch: 2, Steps: 160 | Train Loss: 0.0789906 Vali Loss: 1.2446047 Test Loss: 0.9800513
+EarlyStopping counter: 1 out of 3
+Updating learning rate to 5e-05
+	iters: 100, epoch: 3 | loss: 0.0521263
+	speed: 0.0502s/iter; left time: 59.2494s
+Epoch: 3 cost time: 4.39338493347168
+Epoch: 3, Steps: 160 | Train Loss: 0.0559457 Vali Loss: 1.0126570 Test Loss: 0.9064389
+Validation loss decreased (1.112349 --> 1.012657).  Saving model ...
+Updating learning rate to 2.5e-05
+	iters: 100, epoch: 4 | loss: 0.0544703
+	speed: 0.0517s/iter; left time: 52.8161s
+Epoch: 4 cost time: 4.411756753921509
+Epoch: 4, Steps: 160 | Train Loss: 0.0474378 Vali Loss: 0.9776828 Test Loss: 0.8848423
+Validation loss decreased (1.012657 --> 0.977683).  Saving model ...
+Updating learning rate to 1.25e-05
+	iters: 100, epoch: 5 | loss: 0.0388750
+	speed: 0.0525s/iter; left time: 45.1628s
+Epoch: 5 cost time: 4.399603366851807
+Epoch: 5, Steps: 160 | Train Loss: 0.0434374 Vali Loss: 0.9978689 Test Loss: 0.9087710
+EarlyStopping counter: 1 out of 3
+Updating learning rate to 6.25e-06
+	iters: 100, epoch: 6 | loss: 0.0370520
+	speed: 0.0502s/iter; left time: 35.1856s
+Epoch: 6 cost time: 4.420469522476196
+Epoch: 6, Steps: 160 | Train Loss: 0.0414115 Vali Loss: 1.0389689 Test Loss: 0.9185371
+EarlyStopping counter: 2 out of 3
+Updating learning rate to 3.125e-06
+	iters: 100, epoch: 7 | loss: 0.0391402
+	speed: 0.0499s/iter; left time: 26.9918s
+Epoch: 7 cost time: 4.376450538635254
+Epoch: 7, Steps: 160 | Train Loss: 0.0400852 Vali Loss: 0.9627644 Test Loss: 0.8963165
+Validation loss decreased (0.977683 --> 0.962764).  Saving model ...
+Updating learning rate to 1.5625e-06
+	iters: 100, epoch: 8 | loss: 0.0428730
+	speed: 0.0522s/iter; left time: 19.8760s
+Epoch: 8 cost time: 4.391456604003906
+Epoch: 8, Steps: 160 | Train Loss: 0.0397687 Vali Loss: 0.9707965 Test Loss: 0.9018517
+EarlyStopping counter: 1 out of 3
+Updating learning rate to 7.8125e-07
+	iters: 100, epoch: 9 | loss: 0.0390768
+	speed: 0.0500s/iter; left time: 11.0444s
+Epoch: 9 cost time: 4.403337240219116
+Epoch: 9, Steps: 160 | Train Loss: 0.0400240 Vali Loss: 0.9675925 Test Loss: 0.8954098
+EarlyStopping counter: 2 out of 3
+Updating learning rate to 3.90625e-07
+	iters: 100, epoch: 10 | loss: 0.0349456
+	speed: 0.0512s/iter; left time: 3.1203s
+Epoch: 10 cost time: 4.59401535987854
+Epoch: 10, Steps: 160 | Train Loss: 0.0400001 Vali Loss: 0.9683189 Test Loss: 0.9036146
+EarlyStopping counter: 3 out of 3
+Early stopping
+>>>>>>>testing : exchange_96_Informer_custom_ftM_sl96_ll48_pl96_dm512_nh8_el2_dl1_df2048_fc3_ebtimeF_dtTrue_Exp_0_seed15726<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+test 1422
+mse:0.896021842956543, mae:0.7769829630851746

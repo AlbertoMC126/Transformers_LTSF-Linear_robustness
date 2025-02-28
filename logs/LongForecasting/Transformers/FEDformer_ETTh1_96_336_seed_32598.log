@@ -1,0 +1,51 @@
+Args in experiment:
+Namespace(L=3, activation='gelu', base='legendre', batch_size=32, c_out=7, checkpoints='./checkpoints/', cross_activation='tanh', d_ff=2048, d_layers=1, d_model=512, data='ETTh1', data_path='ETTh1.csv', dec_in=7, des='Exp', devices='0,1', distil=True, do_predict=False, dropout=0.05, e_layers=2, embed='timeF', embed_type=0, enc_in=7, factor=3, features='M', freq='h', gpu=0, is_training=1, itr=1, label_len=48, learning_rate=0.0001, loss='mse', lradj='type1', mode_select='random', model='FEDformer', modes=64, moving_avg=[24], n_heads=8, num_workers=0, output_attention=False, patience=3, pred_len=336, root_path='../dataset', save_pred_values=False, seed=32598, seq_len=96, target='OT', task_id='ETTh1', train_epochs=10, use_amp=False, use_gpu=True, use_multi_gpu=False, version='Fourier')
+Use GPU: cuda:0
+fourier enhanced block used!
+modes=64, index=[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47]
+fourier enhanced block used!
+modes=64, index=[0, 3, 4, 6, 8, 10, 11, 12, 13, 20, 25, 26, 30, 31, 32, 34, 35, 36, 37, 41, 44, 47, 49, 56, 57, 61, 62, 64, 66, 67, 68, 70, 72, 75, 79, 80, 81, 85, 86, 92, 98, 99, 100, 101, 102, 115, 120, 122, 129, 132, 138, 146, 153, 154, 155, 156, 159, 160, 163, 166, 176, 178, 185, 187]
+ fourier enhanced cross attention used!
+modes_q=64, index_q=[1, 7, 12, 16, 18, 27, 36, 37, 40, 41, 45, 46, 48, 49, 51, 52, 57, 62, 64, 65, 69, 70, 72, 75, 81, 83, 85, 86, 88, 89, 92, 93, 97, 103, 105, 107, 108, 109, 113, 114, 119, 122, 123, 126, 127, 129, 136, 144, 147, 149, 150, 153, 159, 165, 167, 168, 175, 176, 182, 184, 185, 188, 189, 191]
+modes_kv=48, index_kv=[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47]
+enc_modes: 48, dec_modes: 64
+>>>>>>>start training : ETTh1_FEDformer_random_modes64_ETTh1_ftM_sl96_ll48_pl336_dm512_nh8_el2_dl1_df2048_fc3_ebtimeF_dtTrue_Exp_0_seed32598>>>>>>>>>>>>>>>>>>>>>>>>>>
+train 8209
+val 2545
+test 2545
+Total number of trainable parameters: 16303127
+Total number of parameters: 16303127
+Epoch: 1 cost time: 57.31348013877869
+Epoch: 1, Steps: 256 | Train Loss: 0.5282212 Vali Loss: 1.3207670 Test Loss: 0.4591951
+Validation loss decreased (inf --> 1.320767).  Saving model ...
+Updating learning rate to 0.0001
+Epoch: 2 cost time: 53.49100613594055
+Epoch: 2, Steps: 256 | Train Loss: 0.4818167 Vali Loss: 1.3151289 Test Loss: 0.4515059
+Validation loss decreased (1.320767 --> 1.315129).  Saving model ...
+Updating learning rate to 5e-05
+Epoch: 3 cost time: 53.93107843399048
+Epoch: 3, Steps: 256 | Train Loss: 0.4706018 Vali Loss: 1.3087435 Test Loss: 0.4471210
+Validation loss decreased (1.315129 --> 1.308743).  Saving model ...
+Updating learning rate to 2.5e-05
+Epoch: 4 cost time: 53.38093400001526
+Epoch: 4, Steps: 256 | Train Loss: 0.4659489 Vali Loss: 1.3055198 Test Loss: 0.4479147
+Validation loss decreased (1.308743 --> 1.305520).  Saving model ...
+Updating learning rate to 1.25e-05
+Epoch: 5 cost time: 53.698952436447144
+Epoch: 5, Steps: 256 | Train Loss: 0.4637845 Vali Loss: 1.3079252 Test Loss: 0.4464367
+EarlyStopping counter: 1 out of 3
+Updating learning rate to 6.25e-06
+Epoch: 6 cost time: 53.44029498100281
+Epoch: 6, Steps: 256 | Train Loss: 0.4627426 Vali Loss: 1.3089888 Test Loss: 0.4452507
+EarlyStopping counter: 2 out of 3
+Updating learning rate to 3.125e-06
+Epoch: 7 cost time: 53.67667579650879
+Epoch: 7, Steps: 256 | Train Loss: 0.4622530 Vali Loss: 1.3073865 Test Loss: 0.4453765
+EarlyStopping counter: 3 out of 3
+Early stopping
+Total training time: 411.0681 seconds
+>>>>>>>testing : ETTh1_FEDformer_random_modes64_ETTh1_ftM_sl96_ll48_pl336_dm512_nh8_el2_dl1_df2048_fc3_ebtimeF_dtTrue_Exp_0_seed32598<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+test 2545
+test shape: (79, 32, 336, 7) (79, 32, 336, 7)
+test shape: (2528, 336, 7) (2528, 336, 7)
+mse:0.44791460037231445, mae:0.46262115240097046

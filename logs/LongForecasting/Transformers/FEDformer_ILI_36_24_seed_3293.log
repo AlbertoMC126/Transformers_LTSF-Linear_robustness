@@ -1,0 +1,63 @@
+Args in experiment:
+Namespace(L=3, activation='gelu', base='legendre', batch_size=32, c_out=7, checkpoints='./checkpoints/', cross_activation='tanh', d_ff=2048, d_layers=1, d_model=512, data='custom', data_path='national_illness.csv', dec_in=7, des='Exp', devices='0,1', distil=True, do_predict=False, dropout=0.05, e_layers=2, embed='timeF', embed_type=0, enc_in=7, factor=3, features='M', freq='h', gpu=0, is_training=1, itr=1, label_len=18, learning_rate=0.0001, loss='mse', lradj='type1', mode_select='random', model='FEDformer', modes=64, moving_avg=[24], n_heads=8, num_workers=0, output_attention=False, patience=3, pred_len=24, root_path='../dataset', save_pred_values=False, seed=3293, seq_len=36, target='OT', task_id='ili', train_epochs=10, use_amp=False, use_gpu=True, use_multi_gpu=False, version='Fourier')
+Use GPU: cuda:0
+fourier enhanced block used!
+modes=64, index=[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17]
+fourier enhanced block used!
+modes=64, index=[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20]
+ fourier enhanced cross attention used!
+modes_q=21, index_q=[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20]
+modes_kv=18, index_kv=[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17]
+enc_modes: 18, dec_modes: 21
+>>>>>>>start training : ili_FEDformer_random_modes64_custom_ftM_sl36_ll18_pl24_dm512_nh8_el2_dl1_df2048_fc3_ebtimeF_dtTrue_Exp_0_seed3293>>>>>>>>>>>>>>>>>>>>>>>>>>
+train 617
+val 74
+test 170
+Total number of trainable parameters: 12502039
+Total number of parameters: 12502039
+Epoch: 1 cost time: 4.198026895523071
+Epoch: 1, Steps: 19 | Train Loss: 1.0573471 Vali Loss: 0.6435634 Test Loss: 4.4037890
+Validation loss decreased (inf --> 0.643563).  Saving model ...
+Updating learning rate to 0.0001
+Epoch: 2 cost time: 0.7393040657043457
+Epoch: 2, Steps: 19 | Train Loss: 0.7606169 Vali Loss: 0.4549013 Test Loss: 3.6485817
+Validation loss decreased (0.643563 --> 0.454901).  Saving model ...
+Updating learning rate to 5e-05
+Epoch: 3 cost time: 0.7533748149871826
+Epoch: 3, Steps: 19 | Train Loss: 0.6407530 Vali Loss: 0.3867033 Test Loss: 3.3916645
+Validation loss decreased (0.454901 --> 0.386703).  Saving model ...
+Updating learning rate to 2.5e-05
+Epoch: 4 cost time: 0.747398853302002
+Epoch: 4, Steps: 19 | Train Loss: 0.5984733 Vali Loss: 0.3323677 Test Loss: 3.3028293
+Validation loss decreased (0.386703 --> 0.332368).  Saving model ...
+Updating learning rate to 1.25e-05
+Epoch: 5 cost time: 0.7456095218658447
+Epoch: 5, Steps: 19 | Train Loss: 0.5630621 Vali Loss: 0.3372642 Test Loss: 3.2846215
+EarlyStopping counter: 1 out of 3
+Updating learning rate to 6.25e-06
+Epoch: 6 cost time: 0.762779712677002
+Epoch: 6, Steps: 19 | Train Loss: 0.5685317 Vali Loss: 0.3261325 Test Loss: 3.2596765
+Validation loss decreased (0.332368 --> 0.326133).  Saving model ...
+Updating learning rate to 3.125e-06
+Epoch: 7 cost time: 0.7543911933898926
+Epoch: 7, Steps: 19 | Train Loss: 0.5677291 Vali Loss: 0.3220668 Test Loss: 3.2424159
+Validation loss decreased (0.326133 --> 0.322067).  Saving model ...
+Updating learning rate to 1.5625e-06
+Epoch: 8 cost time: 0.7523577213287354
+Epoch: 8, Steps: 19 | Train Loss: 0.5674525 Vali Loss: 0.3323007 Test Loss: 3.2381732
+EarlyStopping counter: 1 out of 3
+Updating learning rate to 7.8125e-07
+Epoch: 9 cost time: 0.7432873249053955
+Epoch: 9, Steps: 19 | Train Loss: 0.5653309 Vali Loss: 0.3322912 Test Loss: 3.2360680
+EarlyStopping counter: 2 out of 3
+Updating learning rate to 3.90625e-07
+Epoch: 10 cost time: 0.7425994873046875
+Epoch: 10, Steps: 19 | Train Loss: 0.5680017 Vali Loss: 0.3248878 Test Loss: 3.2352169
+EarlyStopping counter: 3 out of 3
+Early stopping
+Total training time: 13.1986 seconds
+>>>>>>>testing : ili_FEDformer_random_modes64_custom_ftM_sl36_ll18_pl24_dm512_nh8_el2_dl1_df2048_fc3_ebtimeF_dtTrue_Exp_0_seed3293<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+test 170
+test shape: (5, 32, 24, 7) (5, 32, 24, 7)
+test shape: (160, 24, 7) (160, 24, 7)
+mse:3.2424159049987793, mae:1.248442530632019

@@ -1,0 +1,66 @@
+Args in experiment:
+Namespace(activation='gelu', batch_size=32, c_out=7, checkpoints='./checkpoints/', d_ff=2048, d_layers=1, d_model=512, data='custom', data_path='national_illness.csv', dec_in=7, des='Exp', devices='0,1,2,3', distil=True, do_predict=False, dropout=0.05, e_layers=2, embed='timeF', embed_type=0, enc_in=7, factor=1, features='M', freq='h', gpu=0, individual=True, is_training=1, itr=1, label_len=18, learning_rate=0.05, loss='mse', lradj='type1', model='NLinear', model_id='national_illness_104_24', moving_avg=25, n_heads=8, num_workers=0, output_attention=False, patience=5, pred_len=24, root_path='./dataset/', save_pred_values=False, seed=25565, seq_len=104, target='OT', test_flop=False, train_epochs=20, train_only=False, use_amp=False, use_gpu=False, use_multi_gpu=False)
+Use CPU
+>>>>>>>start training : national_illness_104_24_NLinear_custom_ftM_sl104_ll18_pl24_dm512_nh8_el2_dl1_df2048_fc1_ebtimeF_dtTrue_Exp_0_seed25565>>>>>>>>>>>>>>>>>>>>>>>>>>
+train 549
+val 74
+test 170
+Epoch: 1 cost time: 0.03199887275695801
+Epoch: 1, Steps: 17 | Train Loss: 3.2100734 Vali Loss: 0.7523566 Test Loss: 5.2542515
+Validation loss decreased (inf --> 0.752357).  Saving model ...
+Updating learning rate to 0.05
+Epoch: 2 cost time: 0.0280001163482666
+Epoch: 2, Steps: 17 | Train Loss: 1.2161902 Vali Loss: 0.5618558 Test Loss: 4.5432801
+Validation loss decreased (0.752357 --> 0.561856).  Saving model ...
+Updating learning rate to 0.025
+Epoch: 3 cost time: 0.026999711990356445
+Epoch: 3, Steps: 17 | Train Loss: 0.7177396 Vali Loss: 0.4109061 Test Loss: 3.3532925
+Validation loss decreased (0.561856 --> 0.410906).  Saving model ...
+Updating learning rate to 0.0125
+Epoch: 4 cost time: 0.026999473571777344
+Epoch: 4, Steps: 17 | Train Loss: 0.5047705 Vali Loss: 0.2997901 Test Loss: 2.6981275
+Validation loss decreased (0.410906 --> 0.299790).  Saving model ...
+Updating learning rate to 0.00625
+Epoch: 5 cost time: 0.026999235153198242
+Epoch: 5, Steps: 17 | Train Loss: 0.4188146 Vali Loss: 0.2715390 Test Loss: 2.6173933
+Validation loss decreased (0.299790 --> 0.271539).  Saving model ...
+Updating learning rate to 0.003125
+Epoch: 6 cost time: 0.026999235153198242
+Epoch: 6, Steps: 17 | Train Loss: 0.4274309 Vali Loss: 0.2787169 Test Loss: 2.5751104
+EarlyStopping counter: 1 out of 5
+Updating learning rate to 0.0015625
+Epoch: 7 cost time: 0.02700042724609375
+Epoch: 7, Steps: 17 | Train Loss: 0.4193958 Vali Loss: 0.2746453 Test Loss: 2.6018243
+EarlyStopping counter: 2 out of 5
+Updating learning rate to 0.00078125
+Epoch: 8 cost time: 0.02700042724609375
+Epoch: 8, Steps: 17 | Train Loss: 0.4155903 Vali Loss: 0.2686421 Test Loss: 2.5933416
+Validation loss decreased (0.271539 --> 0.268642).  Saving model ...
+Updating learning rate to 0.000390625
+Epoch: 9 cost time: 0.026999711990356445
+Epoch: 9, Steps: 17 | Train Loss: 0.4154162 Vali Loss: 0.2586717 Test Loss: 2.5913131
+Validation loss decreased (0.268642 --> 0.258672).  Saving model ...
+Updating learning rate to 0.0001953125
+Epoch: 10 cost time: 0.026999235153198242
+Epoch: 10, Steps: 17 | Train Loss: 0.4022121 Vali Loss: 0.2726137 Test Loss: 2.5898921
+EarlyStopping counter: 1 out of 5
+Updating learning rate to 9.765625e-05
+Epoch: 11 cost time: 0.026999473571777344
+Epoch: 11, Steps: 17 | Train Loss: 0.4146192 Vali Loss: 0.2645394 Test Loss: 2.5888548
+EarlyStopping counter: 2 out of 5
+Updating learning rate to 4.8828125e-05
+Epoch: 12 cost time: 0.02700018882751465
+Epoch: 12, Steps: 17 | Train Loss: 0.4122603 Vali Loss: 0.2595906 Test Loss: 2.5905855
+EarlyStopping counter: 3 out of 5
+Updating learning rate to 2.44140625e-05
+Epoch: 13 cost time: 0.02700018882751465
+Epoch: 13, Steps: 17 | Train Loss: 0.4156911 Vali Loss: 0.2768732 Test Loss: 2.5906937
+EarlyStopping counter: 4 out of 5
+Updating learning rate to 1.220703125e-05
+Epoch: 14 cost time: 0.02700066566467285
+Epoch: 14, Steps: 17 | Train Loss: 0.4102990 Vali Loss: 0.2833534 Test Loss: 2.5908248
+EarlyStopping counter: 5 out of 5
+Early stopping
+>>>>>>>testing : national_illness_104_24_NLinear_custom_ftM_sl104_ll18_pl24_dm512_nh8_el2_dl1_df2048_fc1_ebtimeF_dtTrue_Exp_0_seed25565<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+test 170
+mse:1.9994107484817505, mae:0.8621957898139954

@@ -1,0 +1,62 @@
+Args in experiment:
+Namespace(activation='gelu', batch_size=32, c_out=7, checkpoints='./checkpoints/', d_ff=2048, d_layers=1, d_model=512, data='custom', data_path='national_illness.csv', dec_in=7, des='Exp', devices='0,1,2,3', distil=True, do_predict=False, dropout=0.05, e_layers=2, embed='timeF', embed_type=0, enc_in=7, factor=1, features='M', freq='h', gpu=0, individual=True, is_training=1, itr=1, label_len=18, learning_rate=0.05, loss='mse', lradj='type1', model='DLinear', model_id='national_illness_104_60', moving_avg=25, n_heads=8, num_workers=0, output_attention=False, patience=5, pred_len=60, root_path='./dataset/', save_pred_values=False, seed=15726, seq_len=104, target='OT', test_flop=False, train_epochs=20, train_only=False, use_amp=False, use_gpu=False, use_multi_gpu=False)
+Use CPU
+>>>>>>>start training : national_illness_104_60_DLinear_custom_ftM_sl104_ll18_pl60_dm512_nh8_el2_dl1_df2048_fc1_ebtimeF_dtTrue_Exp_0_seed15726>>>>>>>>>>>>>>>>>>>>>>>>>>
+train 513
+val 38
+test 134
+Epoch: 1 cost time: 0.10900068283081055
+Epoch: 1, Steps: 16 | Train Loss: 1.9590145 Vali Loss: 0.8800260 Test Loss: 5.0315003
+Validation loss decreased (inf --> 0.880026).  Saving model ...
+Updating learning rate to 0.05
+Epoch: 2 cost time: 0.062000274658203125
+Epoch: 2, Steps: 16 | Train Loss: 1.0535234 Vali Loss: 0.5726376 Test Loss: 4.3475947
+Validation loss decreased (0.880026 --> 0.572638).  Saving model ...
+Updating learning rate to 0.025
+Epoch: 3 cost time: 0.06199979782104492
+Epoch: 3, Steps: 16 | Train Loss: 0.7047569 Vali Loss: 0.3515642 Test Loss: 3.2895713
+Validation loss decreased (0.572638 --> 0.351564).  Saving model ...
+Updating learning rate to 0.0125
+Epoch: 4 cost time: 0.061998605728149414
+Epoch: 4, Steps: 16 | Train Loss: 0.5304327 Vali Loss: 0.2937096 Test Loss: 2.8491831
+Validation loss decreased (0.351564 --> 0.293710).  Saving model ...
+Updating learning rate to 0.00625
+Epoch: 5 cost time: 0.060999155044555664
+Epoch: 5, Steps: 16 | Train Loss: 0.4700296 Vali Loss: 0.2676082 Test Loss: 2.6001680
+Validation loss decreased (0.293710 --> 0.267608).  Saving model ...
+Updating learning rate to 0.003125
+Epoch: 6 cost time: 0.06199955940246582
+Epoch: 6, Steps: 16 | Train Loss: 0.4477131 Vali Loss: 0.2570294 Test Loss: 2.6427951
+Validation loss decreased (0.267608 --> 0.257029).  Saving model ...
+Updating learning rate to 0.0015625
+Epoch: 7 cost time: 0.06200003623962402
+Epoch: 7, Steps: 16 | Train Loss: 0.4402226 Vali Loss: 0.2501942 Test Loss: 2.6619110
+Validation loss decreased (0.257029 --> 0.250194).  Saving model ...
+Updating learning rate to 0.00078125
+Epoch: 8 cost time: 0.06099987030029297
+Epoch: 8, Steps: 16 | Train Loss: 0.4355887 Vali Loss: 0.2393916 Test Loss: 2.6479020
+Validation loss decreased (0.250194 --> 0.239392).  Saving model ...
+Updating learning rate to 0.000390625
+Epoch: 9 cost time: 0.0641489028930664
+Epoch: 9, Steps: 16 | Train Loss: 0.4339201 Vali Loss: 0.2591200 Test Loss: 2.6374779
+EarlyStopping counter: 1 out of 5
+Updating learning rate to 0.0001953125
+Epoch: 10 cost time: 0.07200121879577637
+Epoch: 10, Steps: 16 | Train Loss: 0.4336389 Vali Loss: 0.2536509 Test Loss: 2.6388781
+EarlyStopping counter: 2 out of 5
+Updating learning rate to 9.765625e-05
+Epoch: 11 cost time: 0.0729987621307373
+Epoch: 11, Steps: 16 | Train Loss: 0.4330762 Vali Loss: 0.2595896 Test Loss: 2.6327279
+EarlyStopping counter: 3 out of 5
+Updating learning rate to 4.8828125e-05
+Epoch: 12 cost time: 0.06799840927124023
+Epoch: 12, Steps: 16 | Train Loss: 0.4330450 Vali Loss: 0.2520280 Test Loss: 2.6332932
+EarlyStopping counter: 4 out of 5
+Updating learning rate to 2.44140625e-05
+Epoch: 13 cost time: 0.05099892616271973
+Epoch: 13, Steps: 16 | Train Loss: 0.4329602 Vali Loss: 0.2661842 Test Loss: 2.6337256
+EarlyStopping counter: 5 out of 5
+Early stopping
+>>>>>>>testing : national_illness_104_60_DLinear_custom_ftM_sl104_ll18_pl60_dm512_nh8_el2_dl1_df2048_fc1_ebtimeF_dtTrue_Exp_0_seed15726<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+test 134
+mse:2.4411303997039795, mae:1.0824360847473145

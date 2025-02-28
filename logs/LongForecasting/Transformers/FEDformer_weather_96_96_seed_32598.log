@@ -1,0 +1,63 @@
+Args in experiment:
+Namespace(L=3, activation='gelu', base='legendre', batch_size=32, c_out=21, checkpoints='./checkpoints/', cross_activation='tanh', d_ff=2048, d_layers=1, d_model=512, data='custom', data_path='weather.csv', dec_in=21, des='Exp', devices='0,1', distil=True, do_predict=False, dropout=0.05, e_layers=2, embed='timeF', embed_type=0, enc_in=21, factor=3, features='M', freq='h', gpu=0, is_training=1, itr=1, label_len=48, learning_rate=0.0001, loss='mse', lradj='type1', mode_select='random', model='FEDformer', modes=64, moving_avg=[24], n_heads=8, num_workers=0, output_attention=False, patience=3, pred_len=96, root_path='../dataset', save_pred_values=False, seed=32598, seq_len=96, target='OT', task_id='weather', train_epochs=10, use_amp=False, use_gpu=True, use_multi_gpu=False, version='Fourier')
+Use GPU: cuda:0
+fourier enhanced block used!
+modes=64, index=[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47]
+fourier enhanced block used!
+modes=64, index=[0, 1, 2, 3, 4, 5, 6, 8, 10, 11, 12, 13, 14, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 43, 44, 45, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71]
+ fourier enhanced cross attention used!
+modes_q=64, index_q=[0, 1, 2, 3, 4, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 34, 35, 36, 37, 38, 39, 41, 42, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 56, 57, 59, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71]
+modes_kv=48, index_kv=[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47]
+enc_modes: 48, dec_modes: 64
+>>>>>>>start training : weather_FEDformer_random_modes64_custom_ftM_sl96_ll48_pl96_dm512_nh8_el2_dl1_df2048_fc3_ebtimeF_dtTrue_Exp_0_seed32598>>>>>>>>>>>>>>>>>>>>>>>>>>
+train 36696
+val 5175
+test 10444
+Total number of trainable parameters: 16374821
+Total number of parameters: 16374821
+Epoch: 1 cost time: 176.8084523677826
+Epoch: 1, Steps: 1146 | Train Loss: 0.4982941 Vali Loss: 0.4594436 Test Loss: 0.2183327
+Validation loss decreased (inf --> 0.459444).  Saving model ...
+Updating learning rate to 0.0001
+Epoch: 2 cost time: 172.99843287467957
+Epoch: 2, Steps: 1146 | Train Loss: 0.4489032 Vali Loss: 0.4603443 Test Loss: 0.2259611
+EarlyStopping counter: 1 out of 3
+Updating learning rate to 5e-05
+Epoch: 3 cost time: 172.81330394744873
+Epoch: 3, Steps: 1146 | Train Loss: 0.4368048 Vali Loss: 0.4547691 Test Loss: 0.2196108
+Validation loss decreased (0.459444 --> 0.454769).  Saving model ...
+Updating learning rate to 2.5e-05
+Epoch: 4 cost time: 173.18917322158813
+Epoch: 4, Steps: 1146 | Train Loss: 0.4289469 Vali Loss: 0.4541342 Test Loss: 0.2221119
+Validation loss decreased (0.454769 --> 0.454134).  Saving model ...
+Updating learning rate to 1.25e-05
+Epoch: 5 cost time: 173.06512236595154
+Epoch: 5, Steps: 1146 | Train Loss: 0.4248605 Vali Loss: 0.4544908 Test Loss: 0.2222858
+EarlyStopping counter: 1 out of 3
+Updating learning rate to 6.25e-06
+Epoch: 6 cost time: 173.28255820274353
+Epoch: 6, Steps: 1146 | Train Loss: 0.4225853 Vali Loss: 0.4541976 Test Loss: 0.2232302
+EarlyStopping counter: 2 out of 3
+Updating learning rate to 3.125e-06
+Epoch: 7 cost time: 172.90321683883667
+Epoch: 7, Steps: 1146 | Train Loss: 0.4212863 Vali Loss: 0.4541001 Test Loss: 0.2223213
+Validation loss decreased (0.454134 --> 0.454100).  Saving model ...
+Updating learning rate to 1.5625e-06
+Epoch: 8 cost time: 173.41810059547424
+Epoch: 8, Steps: 1146 | Train Loss: 0.4208284 Vali Loss: 0.4527394 Test Loss: 0.2218963
+Validation loss decreased (0.454100 --> 0.452739).  Saving model ...
+Updating learning rate to 7.8125e-07
+Epoch: 9 cost time: 173.1834740638733
+Epoch: 9, Steps: 1146 | Train Loss: 0.4203985 Vali Loss: 0.4530134 Test Loss: 0.2219239
+EarlyStopping counter: 1 out of 3
+Updating learning rate to 3.90625e-07
+Epoch: 10 cost time: 172.94639039039612
+Epoch: 10, Steps: 1146 | Train Loss: 0.4203275 Vali Loss: 0.4530800 Test Loss: 0.2215896
+EarlyStopping counter: 2 out of 3
+Updating learning rate to 1.953125e-07
+Total training time: 1829.2180 seconds
+>>>>>>>testing : weather_FEDformer_random_modes64_custom_ftM_sl96_ll48_pl96_dm512_nh8_el2_dl1_df2048_fc3_ebtimeF_dtTrue_Exp_0_seed32598<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+test 10444
+test shape: (326, 32, 96, 21) (326, 32, 96, 21)
+test shape: (10432, 96, 21) (10432, 96, 21)
+mse:0.2218962013721466, mae:0.3033555746078491

@@ -1,0 +1,70 @@
+Args in experiment:
+Namespace(activation='gelu', batch_size=32, c_out=8, checkpoints='./checkpoints/', d_ff=2048, d_layers=1, d_model=512, data='custom', data_path='exchange_rate.csv', dec_in=8, des='Exp', devices='0,1,2,3', distil=True, do_predict=False, dropout=0.05, e_layers=2, embed='timeF', embed_type=0, enc_in=8, factor=3, features='M', freq='h', gpu=0, individual=False, is_training=1, itr=1, label_len=48, learning_rate=0.0001, loss='mse', lradj='type1', model='Informer', model_id='exchange_336', moving_avg=25, n_heads=8, num_workers=0, output_attention=False, patience=3, pred_len=336, root_path='./dataset/', seed=10458, seq_len=96, target='OT', test_flop=False, train_epochs=10, train_only=False, use_amp=False, use_gpu=True, use_multi_gpu=False)
+Use GPU: cuda:0
+>>>>>>>start training : exchange_336_Informer_custom_ftM_sl96_ll48_pl336_dm512_nh8_el2_dl1_df2048_fc3_ebtimeF_dtTrue_Exp_0_seed10458>>>>>>>>>>>>>>>>>>>>>>>>>>
+train 4880
+val 425
+test 1182
+	iters: 100, epoch: 1 | loss: 0.1289150
+	speed: 0.0716s/iter; left time: 101.7412s
+Epoch: 1 cost time: 9.335643529891968
+Epoch: 1, Steps: 152 | Train Loss: 0.2132021 Vali Loss: 2.8525662 Test Loss: 1.7072656
+Validation loss decreased (inf --> 2.852566).  Saving model ...
+Updating learning rate to 0.0001
+	iters: 100, epoch: 2 | loss: 0.0741397
+	speed: 0.0732s/iter; left time: 92.8595s
+Epoch: 2 cost time: 6.305823087692261
+Epoch: 2, Steps: 152 | Train Loss: 0.0872393 Vali Loss: 2.7076700 Test Loss: 1.7239201
+Validation loss decreased (2.852566 --> 2.707670).  Saving model ...
+Updating learning rate to 5e-05
+	iters: 100, epoch: 3 | loss: 0.0685682
+	speed: 0.0737s/iter; left time: 82.2802s
+Epoch: 3 cost time: 6.420833587646484
+Epoch: 3, Steps: 152 | Train Loss: 0.0657929 Vali Loss: 2.6600046 Test Loss: 1.7556936
+Validation loss decreased (2.707670 --> 2.660005).  Saving model ...
+Updating learning rate to 2.5e-05
+	iters: 100, epoch: 4 | loss: 0.0554417
+	speed: 0.0750s/iter; left time: 72.4139s
+Epoch: 4 cost time: 6.48084282875061
+Epoch: 4, Steps: 152 | Train Loss: 0.0574091 Vali Loss: 2.6378341 Test Loss: 1.7210882
+Validation loss decreased (2.660005 --> 2.637834).  Saving model ...
+Updating learning rate to 1.25e-05
+	iters: 100, epoch: 5 | loss: 0.0504787
+	speed: 0.0750s/iter; left time: 60.9841s
+Epoch: 5 cost time: 6.507876634597778
+Epoch: 5, Steps: 152 | Train Loss: 0.0541282 Vali Loss: 2.5840368 Test Loss: 1.6986942
+Validation loss decreased (2.637834 --> 2.584037).  Saving model ...
+Updating learning rate to 6.25e-06
+	iters: 100, epoch: 6 | loss: 0.0764176
+	speed: 0.0750s/iter; left time: 49.5790s
+Epoch: 6 cost time: 6.475199937820435
+Epoch: 6, Steps: 152 | Train Loss: 0.0518352 Vali Loss: 2.5069799 Test Loss: 1.6681019
+Validation loss decreased (2.584037 --> 2.506980).  Saving model ...
+Updating learning rate to 3.125e-06
+	iters: 100, epoch: 7 | loss: 0.0531323
+	speed: 0.0743s/iter; left time: 37.8172s
+Epoch: 7 cost time: 6.374294757843018
+Epoch: 7, Steps: 152 | Train Loss: 0.0510471 Vali Loss: 2.5002713 Test Loss: 1.6553587
+Validation loss decreased (2.506980 --> 2.500271).  Saving model ...
+Updating learning rate to 1.5625e-06
+	iters: 100, epoch: 8 | loss: 0.0462461
+	speed: 0.0733s/iter; left time: 26.1593s
+Epoch: 8 cost time: 6.30064582824707
+Epoch: 8, Steps: 152 | Train Loss: 0.0497918 Vali Loss: 2.5328135 Test Loss: 1.6599604
+EarlyStopping counter: 1 out of 3
+Updating learning rate to 7.8125e-07
+	iters: 100, epoch: 9 | loss: 0.0474592
+	speed: 0.0708s/iter; left time: 14.5073s
+Epoch: 9 cost time: 6.3029327392578125
+Epoch: 9, Steps: 152 | Train Loss: 0.0503370 Vali Loss: 2.4848759 Test Loss: 1.6478853
+Validation loss decreased (2.500271 --> 2.484876).  Saving model ...
+Updating learning rate to 3.90625e-07
+	iters: 100, epoch: 10 | loss: 0.0535374
+	speed: 0.0730s/iter; left time: 3.8685s
+Epoch: 10 cost time: 6.305055618286133
+Epoch: 10, Steps: 152 | Train Loss: 0.0506732 Vali Loss: 2.4873915 Test Loss: 1.6431426
+EarlyStopping counter: 1 out of 3
+Updating learning rate to 1.953125e-07
+>>>>>>>testing : exchange_336_Informer_custom_ftM_sl96_ll48_pl336_dm512_nh8_el2_dl1_df2048_fc3_ebtimeF_dtTrue_Exp_0_seed10458<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+test 1182
+mse:1.6476917266845703, mae:1.0189611911773682

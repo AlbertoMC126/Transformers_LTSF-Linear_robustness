@@ -1,0 +1,43 @@
+Args in experiment:
+Namespace(L=3, activation='gelu', base='legendre', batch_size=32, c_out=8, checkpoints='./checkpoints/', cross_activation='tanh', d_ff=2048, d_layers=1, d_model=512, data='custom', data_path='exchange_rate.csv', dec_in=8, des='Exp', devices='0,1', distil=True, do_predict=False, dropout=0.05, e_layers=2, embed='timeF', embed_type=0, enc_in=8, factor=3, features='M', freq='h', gpu=0, is_training=1, itr=1, label_len=48, learning_rate=0.0001, loss='mse', lradj='type1', mode_select='random', model='FEDformer', modes=64, moving_avg=[24], n_heads=8, num_workers=0, output_attention=False, patience=3, pred_len=720, root_path='../dataset', save_pred_values=False, seed=28649, seq_len=96, target='OT', task_id='Exchange', train_epochs=10, use_amp=False, use_gpu=True, use_multi_gpu=False, version='Fourier')
+Use GPU: cuda:0
+fourier enhanced block used!
+modes=64, index=[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47]
+fourier enhanced block used!
+modes=64, index=[8, 17, 25, 30, 42, 58, 60, 61, 73, 75, 84, 85, 86, 87, 88, 93, 97, 104, 129, 131, 133, 138, 150, 158, 160, 161, 165, 169, 175, 182, 192, 193, 194, 199, 222, 223, 225, 228, 245, 252, 267, 268, 269, 275, 277, 278, 279, 285, 289, 290, 313, 323, 328, 336, 338, 341, 350, 354, 359, 364, 374, 375, 378, 381]
+ fourier enhanced cross attention used!
+modes_q=64, index_q=[2, 5, 10, 14, 19, 30, 32, 37, 44, 46, 48, 49, 50, 68, 70, 73, 82, 89, 96, 102, 103, 108, 119, 140, 142, 149, 167, 169, 170, 176, 179, 184, 189, 194, 200, 204, 206, 221, 224, 226, 231, 233, 236, 241, 245, 247, 250, 252, 258, 261, 271, 277, 279, 291, 297, 301, 321, 333, 343, 348, 354, 360, 374, 382]
+modes_kv=48, index_kv=[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47]
+enc_modes: 48, dec_modes: 64
+>>>>>>>start training : Exchange_FEDformer_random_modes64_custom_ftM_sl96_ll48_pl720_dm512_nh8_el2_dl1_df2048_fc3_ebtimeF_dtTrue_Exp_0_seed28649>>>>>>>>>>>>>>>>>>>>>>>>>>
+train 4496
+val 41
+test 798
+Total number of trainable parameters: 16308248
+Total number of parameters: 16308248
+Epoch: 1 cost time: 46.4619505405426
+Epoch: 1, Steps: 140 | Train Loss: 0.9007114 Vali Loss: 1.0972707 Test Loss: 1.0796256
+Validation loss decreased (inf --> 1.097271).  Saving model ...
+Updating learning rate to 0.0001
+Epoch: 2 cost time: 43.07877278327942
+Epoch: 2, Steps: 140 | Train Loss: 0.8680842 Vali Loss: 0.9993194 Test Loss: 1.1656406
+Validation loss decreased (1.097271 --> 0.999319).  Saving model ...
+Updating learning rate to 5e-05
+Epoch: 3 cost time: 43.05441069602966
+Epoch: 3, Steps: 140 | Train Loss: 0.8639479 Vali Loss: 1.0460932 Test Loss: 1.1179830
+EarlyStopping counter: 1 out of 3
+Updating learning rate to 2.5e-05
+Epoch: 4 cost time: 42.827998638153076
+Epoch: 4, Steps: 140 | Train Loss: 0.8633310 Vali Loss: 1.0342970 Test Loss: 1.1394182
+EarlyStopping counter: 2 out of 3
+Updating learning rate to 1.25e-05
+Epoch: 5 cost time: 42.90851879119873
+Epoch: 5, Steps: 140 | Train Loss: 0.8626846 Vali Loss: 1.0512509 Test Loss: 1.1211804
+EarlyStopping counter: 3 out of 3
+Early stopping
+Total training time: 224.4290 seconds
+>>>>>>>testing : Exchange_FEDformer_random_modes64_custom_ftM_sl96_ll48_pl720_dm512_nh8_el2_dl1_df2048_fc3_ebtimeF_dtTrue_Exp_0_seed28649<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+test 798
+test shape: (24, 32, 720, 8) (24, 32, 720, 8)
+test shape: (768, 720, 8) (768, 720, 8)
+mse:1.1656403541564941, mae:0.8427973985671997

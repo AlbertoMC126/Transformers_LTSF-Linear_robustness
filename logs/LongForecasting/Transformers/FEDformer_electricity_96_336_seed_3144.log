@@ -1,0 +1,55 @@
+Args in experiment:
+Namespace(L=3, activation='gelu', base='legendre', batch_size=32, c_out=321, checkpoints='./checkpoints/', cross_activation='tanh', d_ff=2048, d_layers=1, d_model=512, data='custom', data_path='electricity.csv', dec_in=321, des='Exp', devices='0,1', distil=True, do_predict=False, dropout=0.05, e_layers=2, embed='timeF', embed_type=0, enc_in=321, factor=3, features='M', freq='h', gpu=0, is_training=1, itr=1, label_len=48, learning_rate=0.0001, loss='mse', lradj='type1', mode_select='random', model='FEDformer', modes=64, moving_avg=[24], n_heads=8, num_workers=0, output_attention=False, patience=3, pred_len=336, root_path='../dataset', save_pred_values=False, seed=3144, seq_len=96, target='OT', task_id='ECL', train_epochs=10, use_amp=False, use_gpu=True, use_multi_gpu=False, version='Fourier')
+Use GPU: cuda:0
+fourier enhanced block used!
+modes=64, index=[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47]
+fourier enhanced block used!
+modes=64, index=[4, 5, 9, 13, 16, 18, 26, 29, 30, 34, 42, 44, 46, 47, 48, 49, 54, 55, 57, 59, 64, 66, 70, 71, 73, 77, 78, 89, 92, 96, 98, 100, 104, 106, 107, 111, 116, 118, 119, 123, 124, 127, 128, 133, 135, 140, 142, 143, 146, 150, 152, 153, 158, 161, 162, 163, 164, 167, 175, 177, 179, 182, 183, 186]
+ fourier enhanced cross attention used!
+modes_q=64, index_q=[0, 6, 10, 11, 14, 17, 20, 21, 23, 24, 25, 26, 31, 33, 34, 35, 37, 38, 41, 42, 45, 54, 56, 58, 67, 69, 76, 79, 80, 90, 91, 96, 97, 99, 100, 102, 103, 104, 109, 110, 112, 113, 115, 120, 123, 126, 127, 128, 130, 131, 135, 142, 143, 144, 145, 151, 153, 154, 156, 162, 169, 185, 187, 190]
+modes_kv=48, index_kv=[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47]
+enc_modes: 48, dec_modes: 64
+>>>>>>>start training : ECL_FEDformer_random_modes64_custom_ftM_sl96_ll48_pl336_dm512_nh8_el2_dl1_df2048_fc3_ebtimeF_dtTrue_Exp_0_seed3144>>>>>>>>>>>>>>>>>>>>>>>>>>
+train 17981
+val 2297
+test 4925
+Total number of trainable parameters: 17911121
+Total number of parameters: 17911121
+Epoch: 1 cost time: 131.23414587974548
+Epoch: 1, Steps: 561 | Train Loss: 0.3014419 Vali Loss: 0.2019667 Test Loss: 0.2388429
+Validation loss decreased (inf --> 0.201967).  Saving model ...
+Updating learning rate to 0.0001
+Epoch: 2 cost time: 127.41081809997559
+Epoch: 2, Steps: 561 | Train Loss: 0.2181319 Vali Loss: 0.1902565 Test Loss: 0.2234639
+Validation loss decreased (0.201967 --> 0.190257).  Saving model ...
+Updating learning rate to 5e-05
+Epoch: 3 cost time: 127.65615439414978
+Epoch: 3, Steps: 561 | Train Loss: 0.2006861 Vali Loss: 0.1802393 Test Loss: 0.2146511
+Validation loss decreased (0.190257 --> 0.180239).  Saving model ...
+Updating learning rate to 2.5e-05
+Epoch: 4 cost time: 127.44553732872009
+Epoch: 4, Steps: 561 | Train Loss: 0.1932353 Vali Loss: 0.1809655 Test Loss: 0.2134519
+EarlyStopping counter: 1 out of 3
+Updating learning rate to 1.25e-05
+Epoch: 5 cost time: 127.30740761756897
+Epoch: 5, Steps: 561 | Train Loss: 0.1899522 Vali Loss: 0.1794298 Test Loss: 0.2122359
+Validation loss decreased (0.180239 --> 0.179430).  Saving model ...
+Updating learning rate to 6.25e-06
+Epoch: 6 cost time: 127.72265243530273
+Epoch: 6, Steps: 561 | Train Loss: 0.1883923 Vali Loss: 0.1798116 Test Loss: 0.2126009
+EarlyStopping counter: 1 out of 3
+Updating learning rate to 3.125e-06
+Epoch: 7 cost time: 127.47365522384644
+Epoch: 7, Steps: 561 | Train Loss: 0.1875947 Vali Loss: 0.1797990 Test Loss: 0.2125281
+EarlyStopping counter: 2 out of 3
+Updating learning rate to 1.5625e-06
+Epoch: 8 cost time: 127.7046070098877
+Epoch: 8, Steps: 561 | Train Loss: 0.1871761 Vali Loss: 0.1795566 Test Loss: 0.2126245
+EarlyStopping counter: 3 out of 3
+Early stopping
+Total training time: 1133.7554 seconds
+>>>>>>>testing : ECL_FEDformer_random_modes64_custom_ftM_sl96_ll48_pl336_dm512_nh8_el2_dl1_df2048_fc3_ebtimeF_dtTrue_Exp_0_seed3144<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+test 4925
+test shape: (153, 32, 336, 321) (153, 32, 336, 321)
+test shape: (4896, 336, 321) (4896, 336, 321)
+mse:0.21223513782024384, mae:0.3271597921848297

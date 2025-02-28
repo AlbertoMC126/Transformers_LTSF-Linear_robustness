@@ -1,0 +1,55 @@
+Args in experiment:
+Namespace(L=3, activation='gelu', base='legendre', batch_size=32, c_out=21, checkpoints='./checkpoints/', cross_activation='tanh', d_ff=2048, d_layers=1, d_model=512, data='custom', data_path='weather.csv', dec_in=21, des='Exp', devices='0,1', distil=True, do_predict=False, dropout=0.05, e_layers=2, embed='timeF', embed_type=0, enc_in=21, factor=3, features='M', freq='h', gpu=0, is_training=1, itr=1, label_len=48, learning_rate=0.0001, loss='mse', lradj='type1', mode_select='random', model='FEDformer', modes=64, moving_avg=[24], n_heads=8, num_workers=0, output_attention=False, patience=3, pred_len=720, root_path='../dataset', save_pred_values=False, seed=25565, seq_len=96, target='OT', task_id='weather', train_epochs=10, use_amp=False, use_gpu=True, use_multi_gpu=False, version='Fourier')
+Use GPU: cuda:0
+fourier enhanced block used!
+modes=64, index=[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47]
+fourier enhanced block used!
+modes=64, index=[12, 20, 29, 32, 33, 34, 46, 47, 53, 55, 62, 73, 74, 76, 83, 85, 90, 94, 95, 107, 112, 127, 136, 138, 142, 149, 161, 163, 164, 171, 178, 179, 180, 188, 191, 198, 209, 211, 214, 222, 225, 226, 227, 232, 244, 259, 261, 266, 267, 270, 272, 276, 281, 289, 294, 297, 299, 310, 314, 318, 341, 353, 378, 382]
+ fourier enhanced cross attention used!
+modes_q=64, index_q=[3, 8, 10, 14, 20, 31, 35, 39, 47, 53, 61, 66, 72, 75, 86, 96, 98, 99, 112, 122, 126, 131, 138, 139, 141, 145, 154, 155, 161, 174, 184, 187, 207, 211, 213, 225, 228, 229, 231, 234, 239, 242, 246, 247, 258, 259, 260, 264, 266, 279, 282, 285, 288, 307, 315, 326, 337, 347, 354, 358, 361, 367, 369, 379]
+modes_kv=48, index_kv=[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47]
+enc_modes: 48, dec_modes: 64
+>>>>>>>start training : weather_FEDformer_random_modes64_custom_ftM_sl96_ll48_pl720_dm512_nh8_el2_dl1_df2048_fc3_ebtimeF_dtTrue_Exp_0_seed25565>>>>>>>>>>>>>>>>>>>>>>>>>>
+train 36072
+val 4551
+test 9820
+Total number of trainable parameters: 16374821
+Total number of parameters: 16374821
+Epoch: 1 cost time: 358.3716814517975
+Epoch: 1, Steps: 1127 | Train Loss: 0.7255147 Vali Loss: 0.7665224 Test Loss: 0.3945754
+Validation loss decreased (inf --> 0.766522).  Saving model ...
+Updating learning rate to 0.0001
+Epoch: 2 cost time: 357.4361231327057
+Epoch: 2, Steps: 1127 | Train Loss: 0.6810051 Vali Loss: 0.7554771 Test Loss: 0.3877547
+Validation loss decreased (0.766522 --> 0.755477).  Saving model ...
+Updating learning rate to 5e-05
+Epoch: 3 cost time: 353.29316544532776
+Epoch: 3, Steps: 1127 | Train Loss: 0.6650173 Vali Loss: 0.7552774 Test Loss: 0.3895997
+Validation loss decreased (0.755477 --> 0.755277).  Saving model ...
+Updating learning rate to 2.5e-05
+Epoch: 4 cost time: 348.70998454093933
+Epoch: 4, Steps: 1127 | Train Loss: 0.6547154 Vali Loss: 0.7566870 Test Loss: 0.3938385
+EarlyStopping counter: 1 out of 3
+Updating learning rate to 1.25e-05
+Epoch: 5 cost time: 347.80749678611755
+Epoch: 5, Steps: 1127 | Train Loss: 0.6504686 Vali Loss: 0.7539220 Test Loss: 0.3911272
+Validation loss decreased (0.755277 --> 0.753922).  Saving model ...
+Updating learning rate to 6.25e-06
+Epoch: 6 cost time: 350.81177282333374
+Epoch: 6, Steps: 1127 | Train Loss: 0.6483933 Vali Loss: 0.7561811 Test Loss: 0.3936608
+EarlyStopping counter: 1 out of 3
+Updating learning rate to 3.125e-06
+Epoch: 7 cost time: 349.8313066959381
+Epoch: 7, Steps: 1127 | Train Loss: 0.6472379 Vali Loss: 0.7550141 Test Loss: 0.3927876
+EarlyStopping counter: 2 out of 3
+Updating learning rate to 1.5625e-06
+Epoch: 8 cost time: 353.33794140815735
+Epoch: 8, Steps: 1127 | Train Loss: 0.6466356 Vali Loss: 0.7551941 Test Loss: 0.3929051
+EarlyStopping counter: 3 out of 3
+Early stopping
+Total training time: 2990.1068 seconds
+>>>>>>>testing : weather_FEDformer_random_modes64_custom_ftM_sl96_ll48_pl720_dm512_nh8_el2_dl1_df2048_fc3_ebtimeF_dtTrue_Exp_0_seed25565<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+test 9820
+test shape: (306, 32, 720, 21) (306, 32, 720, 21)
+test shape: (9792, 720, 21) (9792, 720, 21)
+mse:0.39112669229507446, mae:0.4016428291797638

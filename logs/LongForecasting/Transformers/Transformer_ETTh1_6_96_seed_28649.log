@@ -1,0 +1,65 @@
+Args in experiment:
+Namespace(activation='gelu', batch_size=32, c_out=7, checkpoints='./checkpoints/', d_ff=2048, d_layers=1, d_model=512, data='ETTh1', data_path='ETTh1.csv', dec_in=7, des='Exp', devices='0,1,2,3', distil=True, do_predict=False, dropout=0.05, e_layers=2, embed='timeF', embed_type=0, enc_in=7, factor=3, features='M', freq='h', gpu=0, individual=False, is_training=1, itr=1, label_len=6, learning_rate=0.0001, loss='mse', lradj='type1', model='Transformer', model_id='ETTh1_96', moving_avg=25, n_heads=8, num_workers=0, output_attention=False, patience=3, pred_len=96, root_path='./dataset/', save_pred_values=False, seed=28649, seq_len=6, target='OT', test_flop=False, train_epochs=10, train_only=False, use_amp=False, use_gpu=True, use_multi_gpu=False)
+Use GPU: cuda:0
+>>>>>>>start training : ETTh1_96_Transformer_ETTh1_ftM_sl6_ll6_pl96_dm512_nh8_el2_dl1_df2048_fc3_ebtimeF_dtTrue_Exp_0_seed28649>>>>>>>>>>>>>>>>>>>>>>>>>>
+train 8539
+data_set:  <data_provider.data_loader.Dataset_ETT_hour object at 0x000001E1A43E0278>
+val 2785
+data_set:  <data_provider.data_loader.Dataset_ETT_hour object at 0x000001E1F1974908>
+test 2785
+data_set:  <data_provider.data_loader.Dataset_ETT_hour object at 0x000001E1A43E0860>
+Total number of trainable parameters: 10540039
+Total number of parameters: 10540039
+	iters: 100, epoch: 1 | loss: 0.5419555
+	speed: 0.0490s/iter; left time: 125.5468s
+	iters: 200, epoch: 1 | loss: 0.4950144
+	speed: 0.0159s/iter; left time: 39.1638s
+Epoch: 1 cost time: 7.561453342437744
+Epoch: 1, Steps: 266 | Train Loss: 0.4747972 Vali Loss: 1.0145454 Test Loss: 0.8649387
+Validation loss decreased (inf --> 1.014545).  Saving model ...
+Updating learning rate to 0.0001
+	iters: 100, epoch: 2 | loss: 0.4078847
+	speed: 0.0375s/iter; left time: 86.0019s
+	iters: 200, epoch: 2 | loss: 0.3511053
+	speed: 0.0165s/iter; left time: 36.1792s
+Epoch: 2 cost time: 4.36574125289917
+Epoch: 2, Steps: 266 | Train Loss: 0.3620930 Vali Loss: 0.9839643 Test Loss: 0.8748715
+Validation loss decreased (1.014545 --> 0.983964).  Saving model ...
+Updating learning rate to 5e-05
+	iters: 100, epoch: 3 | loss: 0.2996156
+	speed: 0.0386s/iter; left time: 78.2294s
+	iters: 200, epoch: 3 | loss: 0.3564295
+	speed: 0.0165s/iter; left time: 31.7856s
+Epoch: 3 cost time: 4.3391571044921875
+Epoch: 3, Steps: 266 | Train Loss: 0.3170112 Vali Loss: 0.9726992 Test Loss: 0.8961315
+Validation loss decreased (0.983964 --> 0.972699).  Saving model ...
+Updating learning rate to 2.5e-05
+	iters: 100, epoch: 4 | loss: 0.2652800
+	speed: 0.0386s/iter; left time: 68.0065s
+	iters: 200, epoch: 4 | loss: 0.2915357
+	speed: 0.0163s/iter; left time: 27.1180s
+Epoch: 4 cost time: 4.270579099655151
+Epoch: 4, Steps: 266 | Train Loss: 0.2964949 Vali Loss: 0.9995729 Test Loss: 0.9122289
+EarlyStopping counter: 1 out of 3
+Updating learning rate to 1.25e-05
+	iters: 100, epoch: 5 | loss: 0.2962132
+	speed: 0.0357s/iter; left time: 53.5061s
+	iters: 200, epoch: 5 | loss: 0.2737159
+	speed: 0.0159s/iter; left time: 22.2131s
+Epoch: 5 cost time: 4.288080453872681
+Epoch: 5, Steps: 266 | Train Loss: 0.2860486 Vali Loss: 1.0227175 Test Loss: 0.9171768
+EarlyStopping counter: 2 out of 3
+Updating learning rate to 6.25e-06
+	iters: 100, epoch: 6 | loss: 0.2781411
+	speed: 0.0356s/iter; left time: 43.8274s
+	iters: 200, epoch: 6 | loss: 0.2669723
+	speed: 0.0160s/iter; left time: 18.0846s
+Epoch: 6 cost time: 4.30113959312439
+Epoch: 6, Steps: 266 | Train Loss: 0.2809848 Vali Loss: 1.0259452 Test Loss: 0.9195352
+EarlyStopping counter: 3 out of 3
+Early stopping
+Total training time: 35.1208 seconds
+>>>>>>>testing : ETTh1_96_Transformer_ETTh1_ftM_sl6_ll6_pl96_dm512_nh8_el2_dl1_df2048_fc3_ebtimeF_dtTrue_Exp_0_seed28649<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+test 2785
+data_set:  <data_provider.data_loader.Dataset_ETT_hour object at 0x000001E1F19744E0>
+mse:0.8974019289016724, mae:0.7082160711288452

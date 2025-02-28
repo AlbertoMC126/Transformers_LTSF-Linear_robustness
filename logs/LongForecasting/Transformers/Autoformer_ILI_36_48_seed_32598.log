@@ -1,0 +1,46 @@
+Args in experiment:
+Namespace(activation='gelu', batch_size=32, c_out=7, checkpoints='./checkpoints/', d_ff=2048, d_layers=1, d_model=512, data='custom', data_path='national_illness.csv', dec_in=7, des='Exp', devices='0,1,2,3', distil=True, do_predict=False, dropout=0.05, e_layers=2, embed='timeF', embed_type=0, enc_in=7, factor=3, features='M', freq='h', gpu=0, individual=False, is_training=1, itr=1, label_len=18, learning_rate=0.0001, loss='mse', lradj='type1', model='Autoformer', model_id='ili_48', moving_avg=25, n_heads=8, num_workers=0, output_attention=False, patience=3, pred_len=48, root_path='./dataset/', seed=32598, seq_len=36, target='OT', test_flop=False, train_epochs=10, train_only=False, use_amp=False, use_gpu=True, use_multi_gpu=False)
+Use GPU: cuda:0
+>>>>>>>start training : ili_48_Autoformer_custom_ftM_sl36_ll18_pl48_dm512_nh8_el2_dl1_df2048_fc3_ebtimeF_dtTrue_Exp_0_seed32598>>>>>>>>>>>>>>>>>>>>>>>>>>
+train 593
+val 50
+test 146
+Epoch: 1 cost time: 4.00112771987915
+Epoch: 1, Steps: 18 | Train Loss: 0.8604349 Vali Loss: 0.4337672 Test Loss: 3.6922822
+Validation loss decreased (inf --> 0.433767).  Saving model ...
+Updating learning rate to 0.0001
+Epoch: 2 cost time: 0.5243430137634277
+Epoch: 2, Steps: 18 | Train Loss: 0.6338237 Vali Loss: 0.3299902 Test Loss: 3.2131677
+Validation loss decreased (0.433767 --> 0.329990).  Saving model ...
+Updating learning rate to 5e-05
+Epoch: 3 cost time: 0.5172224044799805
+Epoch: 3, Steps: 18 | Train Loss: 0.5966998 Vali Loss: 0.3104146 Test Loss: 3.2173405
+Validation loss decreased (0.329990 --> 0.310415).  Saving model ...
+Updating learning rate to 2.5e-05
+Epoch: 4 cost time: 0.514014482498169
+Epoch: 4, Steps: 18 | Train Loss: 0.5772549 Vali Loss: 0.2957991 Test Loss: 3.2257187
+Validation loss decreased (0.310415 --> 0.295799).  Saving model ...
+Updating learning rate to 1.25e-05
+Epoch: 5 cost time: 0.524298906326294
+Epoch: 5, Steps: 18 | Train Loss: 0.5451677 Vali Loss: 0.2983380 Test Loss: 3.1693656
+EarlyStopping counter: 1 out of 3
+Updating learning rate to 6.25e-06
+Epoch: 6 cost time: 0.5377686023712158
+Epoch: 6, Steps: 18 | Train Loss: 0.5348059 Vali Loss: 0.2891484 Test Loss: 3.1774235
+Validation loss decreased (0.295799 --> 0.289148).  Saving model ...
+Updating learning rate to 3.125e-06
+Epoch: 7 cost time: 0.5232598781585693
+Epoch: 7, Steps: 18 | Train Loss: 0.5367931 Vali Loss: 0.2974390 Test Loss: 3.1789947
+EarlyStopping counter: 1 out of 3
+Updating learning rate to 1.5625e-06
+Epoch: 8 cost time: 0.5103621482849121
+Epoch: 8, Steps: 18 | Train Loss: 0.5441788 Vali Loss: 0.2910971 Test Loss: 3.1793015
+EarlyStopping counter: 2 out of 3
+Updating learning rate to 7.8125e-07
+Epoch: 9 cost time: 0.5139572620391846
+Epoch: 9, Steps: 18 | Train Loss: 0.5298216 Vali Loss: 0.3042760 Test Loss: 3.1783643
+EarlyStopping counter: 3 out of 3
+Early stopping
+>>>>>>>testing : ili_48_Autoformer_custom_ftM_sl36_ll18_pl48_dm512_nh8_el2_dl1_df2048_fc3_ebtimeF_dtTrue_Exp_0_seed32598<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+test 146
+mse:2.951627016067505, mae:1.164061188697815

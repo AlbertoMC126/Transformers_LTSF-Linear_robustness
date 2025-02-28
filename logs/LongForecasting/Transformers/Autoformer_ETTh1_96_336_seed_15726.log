@@ -1,0 +1,50 @@
+Args in experiment:
+Namespace(activation='gelu', batch_size=32, c_out=7, checkpoints='./checkpoints/', d_ff=2048, d_layers=1, d_model=512, data='ETTh1', data_path='ETTh1.csv', dec_in=7, des='Exp', devices='0,1,2,3', distil=True, do_predict=False, dropout=0.05, e_layers=2, embed='timeF', embed_type=0, enc_in=7, factor=3, features='M', freq='h', gpu=0, individual=False, is_training=1, itr=1, label_len=48, learning_rate=0.0001, loss='mse', lradj='type1', model='Autoformer', model_id='ETTh1_336', moving_avg=25, n_heads=8, num_workers=0, output_attention=False, patience=3, pred_len=336, root_path='./dataset/', seed=15726, seq_len=96, target='OT', test_flop=False, train_epochs=10, train_only=False, use_amp=False, use_gpu=True, use_multi_gpu=False)
+Use GPU: cuda:0
+>>>>>>>start training : ETTh1_336_Autoformer_ETTh1_ftM_sl96_ll48_pl336_dm512_nh8_el2_dl1_df2048_fc3_ebtimeF_dtTrue_Exp_0_seed15726>>>>>>>>>>>>>>>>>>>>>>>>>>
+train 8209
+val 2545
+test 2545
+	iters: 100, epoch: 1 | loss: 0.4789828
+	speed: 0.1169s/iter; left time: 287.5743s
+	iters: 200, epoch: 1 | loss: 0.4763041
+	speed: 0.0826s/iter; left time: 194.9479s
+Epoch: 1 cost time: 24.603428840637207
+Epoch: 1, Steps: 256 | Train Loss: 0.5242167 Vali Loss: 1.4415741 Test Loss: 0.5619801
+Validation loss decreased (inf --> 1.441574).  Saving model ...
+Updating learning rate to 0.0001
+	iters: 100, epoch: 2 | loss: 0.4317228
+	speed: 0.2195s/iter; left time: 483.9349s
+	iters: 200, epoch: 2 | loss: 0.4321885
+	speed: 0.0825s/iter; left time: 173.5939s
+Epoch: 2 cost time: 21.098634719848633
+Epoch: 2, Steps: 256 | Train Loss: 0.4603859 Vali Loss: 1.4044945 Test Loss: 0.5383956
+Validation loss decreased (1.441574 --> 1.404495).  Saving model ...
+Updating learning rate to 5e-05
+	iters: 100, epoch: 3 | loss: 0.4559256
+	speed: 0.2181s/iter; left time: 425.1210s
+	iters: 200, epoch: 3 | loss: 0.3831391
+	speed: 0.0825s/iter; left time: 152.5033s
+Epoch: 3 cost time: 21.117192029953003
+Epoch: 3, Steps: 256 | Train Loss: 0.4179509 Vali Loss: 1.5340019 Test Loss: 0.5501300
+EarlyStopping counter: 1 out of 3
+Updating learning rate to 2.5e-05
+	iters: 100, epoch: 4 | loss: 0.3584146
+	speed: 0.2161s/iter; left time: 365.8249s
+	iters: 200, epoch: 4 | loss: 0.4366424
+	speed: 0.0824s/iter; left time: 131.3096s
+Epoch: 4 cost time: 21.105030298233032
+Epoch: 4, Steps: 256 | Train Loss: 0.3854098 Vali Loss: 1.6943491 Test Loss: 0.6431921
+EarlyStopping counter: 2 out of 3
+Updating learning rate to 1.25e-05
+	iters: 100, epoch: 5 | loss: 0.3572733
+	speed: 0.2161s/iter; left time: 310.5354s
+	iters: 200, epoch: 5 | loss: 0.4001027
+	speed: 0.0830s/iter; left time: 110.9097s
+Epoch: 5 cost time: 21.187462329864502
+Epoch: 5, Steps: 256 | Train Loss: 0.3687543 Vali Loss: 1.7359841 Test Loss: 0.6596614
+EarlyStopping counter: 3 out of 3
+Early stopping
+>>>>>>>testing : ETTh1_336_Autoformer_ETTh1_ftM_sl96_ll48_pl336_dm512_nh8_el2_dl1_df2048_fc3_ebtimeF_dtTrue_Exp_0_seed15726<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+test 2545
+mse:0.5373851656913757, mae:0.5165967345237732

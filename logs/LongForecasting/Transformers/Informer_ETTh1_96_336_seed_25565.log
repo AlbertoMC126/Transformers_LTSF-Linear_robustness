@@ -1,0 +1,42 @@
+Args in experiment:
+Namespace(activation='gelu', batch_size=32, c_out=7, checkpoints='./checkpoints/', d_ff=2048, d_layers=1, d_model=512, data='ETTh1', data_path='ETTh1.csv', dec_in=7, des='Exp', devices='0,1,2,3', distil=True, do_predict=False, dropout=0.05, e_layers=2, embed='timeF', embed_type=0, enc_in=7, factor=3, features='M', freq='h', gpu=0, individual=False, is_training=1, itr=1, label_len=48, learning_rate=0.0001, loss='mse', lradj='type1', model='Informer', model_id='ETTh1_336', moving_avg=25, n_heads=8, num_workers=0, output_attention=False, patience=3, pred_len=336, root_path='./dataset/', seed=25565, seq_len=96, target='OT', test_flop=False, train_epochs=10, train_only=False, use_amp=False, use_gpu=True, use_multi_gpu=False)
+Use GPU: cuda:0
+>>>>>>>start training : ETTh1_336_Informer_ETTh1_ftM_sl96_ll48_pl336_dm512_nh8_el2_dl1_df2048_fc3_ebtimeF_dtTrue_Exp_0_seed25565>>>>>>>>>>>>>>>>>>>>>>>>>>
+train 8209
+val 2545
+test 2545
+	iters: 100, epoch: 1 | loss: 0.5663998
+	speed: 0.0717s/iter; left time: 176.5569s
+	iters: 200, epoch: 1 | loss: 0.4717987
+	speed: 0.0411s/iter; left time: 96.9530s
+Epoch: 1 cost time: 13.605915784835815
+Epoch: 1, Steps: 256 | Train Loss: 0.5616427 Vali Loss: 1.5879970 Test Loss: 1.1222550
+Validation loss decreased (inf --> 1.587997).  Saving model ...
+Updating learning rate to 0.0001
+	iters: 100, epoch: 2 | loss: 0.5102513
+	speed: 0.0924s/iter; left time: 203.6386s
+	iters: 200, epoch: 2 | loss: 0.3935182
+	speed: 0.0411s/iter; left time: 86.4404s
+Epoch: 2 cost time: 10.61476182937622
+Epoch: 2, Steps: 256 | Train Loss: 0.4835789 Vali Loss: 1.6370015 Test Loss: 1.1377341
+EarlyStopping counter: 1 out of 3
+Updating learning rate to 5e-05
+	iters: 100, epoch: 3 | loss: 0.4856343
+	speed: 0.0925s/iter; left time: 180.2532s
+	iters: 200, epoch: 3 | loss: 0.4085448
+	speed: 0.0429s/iter; left time: 79.4033s
+Epoch: 3 cost time: 11.057073593139648
+Epoch: 3, Steps: 256 | Train Loss: 0.4409533 Vali Loss: 1.6710871 Test Loss: 1.2810103
+EarlyStopping counter: 2 out of 3
+Updating learning rate to 2.5e-05
+	iters: 100, epoch: 4 | loss: 0.4478010
+	speed: 0.0924s/iter; left time: 156.4739s
+	iters: 200, epoch: 4 | loss: 0.4472102
+	speed: 0.0433s/iter; left time: 68.9621s
+Epoch: 4 cost time: 11.050884008407593
+Epoch: 4, Steps: 256 | Train Loss: 0.4244478 Vali Loss: 1.6776494 Test Loss: 1.2944647
+EarlyStopping counter: 3 out of 3
+Early stopping
+>>>>>>>testing : ETTh1_336_Informer_ETTh1_ftM_sl96_ll48_pl336_dm512_nh8_el2_dl1_df2048_fc3_ebtimeF_dtTrue_Exp_0_seed25565<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+test 2545
+mse:1.1230659484863281, mae:0.8325840830802917

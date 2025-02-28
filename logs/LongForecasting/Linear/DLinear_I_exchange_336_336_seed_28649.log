@@ -1,0 +1,70 @@
+Args in experiment:
+Namespace(activation='gelu', batch_size=32, c_out=7, checkpoints='./checkpoints/', d_ff=2048, d_layers=1, d_model=512, data='custom', data_path='exchange_rate.csv', dec_in=7, des='Exp', devices='0,1,2,3', distil=True, do_predict=False, dropout=0.05, e_layers=2, embed='timeF', embed_type=0, enc_in=8, factor=1, features='M', freq='h', gpu=0, individual=True, is_training=1, itr=1, label_len=48, learning_rate=0.0005, loss='mse', lradj='type1', model='DLinear', model_id='Exchange_336_336', moving_avg=25, n_heads=8, num_workers=0, output_attention=False, patience=5, pred_len=336, root_path='./dataset/', save_pred_values=False, seed=28649, seq_len=336, target='OT', test_flop=False, train_epochs=20, train_only=False, use_amp=False, use_gpu=False, use_multi_gpu=False)
+Use CPU
+>>>>>>>start training : Exchange_336_336_DLinear_custom_ftM_sl336_ll48_pl336_dm512_nh8_el2_dl1_df2048_fc1_ebtimeF_dtTrue_Exp_0_seed28649>>>>>>>>>>>>>>>>>>>>>>>>>>
+train 4640
+val 425
+test 1182
+	iters: 100, epoch: 1 | loss: 0.2946016
+	speed: 0.0193s/iter; left time: 54.0779s
+Epoch: 1 cost time: 2.759066104888916
+Epoch: 1, Steps: 145 | Train Loss: 0.4265929 Vali Loss: 1.2224381 Test Loss: 0.3330821
+Validation loss decreased (inf --> 1.222438).  Saving model ...
+Updating learning rate to 0.0005
+	iters: 100, epoch: 2 | loss: 0.3574006
+	speed: 0.0289s/iter; left time: 76.8444s
+Epoch: 2 cost time: 2.6073694229125977
+Epoch: 2, Steps: 145 | Train Loss: 0.3627132 Vali Loss: 1.2648940 Test Loss: 0.3948021
+EarlyStopping counter: 1 out of 5
+Updating learning rate to 0.00025
+	iters: 100, epoch: 3 | loss: 0.3325162
+	speed: 0.0305s/iter; left time: 76.5316s
+Epoch: 3 cost time: 2.8644351959228516
+Epoch: 3, Steps: 145 | Train Loss: 0.3493114 Vali Loss: 1.4569345 Test Loss: 0.4532363
+EarlyStopping counter: 2 out of 5
+Updating learning rate to 0.000125
+	iters: 100, epoch: 4 | loss: 0.3852921
+	speed: 0.0317s/iter; left time: 74.9110s
+Epoch: 4 cost time: 2.7997748851776123
+Epoch: 4, Steps: 145 | Train Loss: 0.3447126 Vali Loss: 1.2291585 Test Loss: 0.3564537
+EarlyStopping counter: 3 out of 5
+Updating learning rate to 6.25e-05
+	iters: 100, epoch: 5 | loss: 0.4218867
+	speed: 0.0297s/iter; left time: 65.8609s
+Epoch: 5 cost time: 2.7334184646606445
+Epoch: 5, Steps: 145 | Train Loss: 0.3430666 Vali Loss: 1.1391422 Test Loss: 0.3361945
+Validation loss decreased (1.222438 --> 1.139142).  Saving model ...
+Updating learning rate to 3.125e-05
+	iters: 100, epoch: 6 | loss: 0.3736945
+	speed: 0.0314s/iter; left time: 65.2179s
+Epoch: 6 cost time: 2.7484772205352783
+Epoch: 6, Steps: 145 | Train Loss: 0.3420874 Vali Loss: 1.1921945 Test Loss: 0.3625765
+EarlyStopping counter: 1 out of 5
+Updating learning rate to 1.5625e-05
+	iters: 100, epoch: 7 | loss: 0.4236226
+	speed: 0.0298s/iter; left time: 57.5471s
+Epoch: 7 cost time: 2.6932718753814697
+Epoch: 7, Steps: 145 | Train Loss: 0.3413879 Vali Loss: 1.1996254 Test Loss: 0.3482147
+EarlyStopping counter: 2 out of 5
+Updating learning rate to 7.8125e-06
+	iters: 100, epoch: 8 | loss: 0.3324270
+	speed: 0.0314s/iter; left time: 56.1473s
+Epoch: 8 cost time: 2.8146607875823975
+Epoch: 8, Steps: 145 | Train Loss: 0.3411648 Vali Loss: 1.1986610 Test Loss: 0.3576874
+EarlyStopping counter: 3 out of 5
+Updating learning rate to 3.90625e-06
+	iters: 100, epoch: 9 | loss: 0.3999200
+	speed: 0.0295s/iter; left time: 48.3408s
+Epoch: 9 cost time: 2.575714111328125
+Epoch: 9, Steps: 145 | Train Loss: 0.3409990 Vali Loss: 1.2060148 Test Loss: 0.3588935
+EarlyStopping counter: 4 out of 5
+Updating learning rate to 1.953125e-06
+	iters: 100, epoch: 10 | loss: 0.4382784
+	speed: 0.0280s/iter; left time: 41.8515s
+Epoch: 10 cost time: 2.3873484134674072
+Epoch: 10, Steps: 145 | Train Loss: 0.3409182 Vali Loss: 1.2068397 Test Loss: 0.3584184
+EarlyStopping counter: 5 out of 5
+Early stopping
+>>>>>>>testing : Exchange_336_336_DLinear_custom_ftM_sl336_ll48_pl336_dm512_nh8_el2_dl1_df2048_fc1_ebtimeF_dtTrue_Exp_0_seed28649<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+test 1182
+mse:0.33602437376976013, mae:0.4435153007507324

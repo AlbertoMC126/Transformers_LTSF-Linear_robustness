@@ -1,0 +1,74 @@
+Args in experiment:
+Namespace(activation='gelu', batch_size=32, c_out=7, checkpoints='./checkpoints/', d_ff=2048, d_layers=1, d_model=512, data='ETTh1', data_path='ETTh1.csv', dec_in=7, des='Exp', devices='0,1,2,3', distil=True, do_predict=False, dropout=0.05, e_layers=2, embed='timeF', embed_type=0, enc_in=7, factor=3, features='M', freq='h', gpu=0, individual=False, is_training=1, itr=1, label_len=48, learning_rate=0.0001, loss='mse', lradj='type1', model='Informer', model_id='ETTh1_720', moving_avg=25, n_heads=8, num_workers=0, output_attention=False, patience=3, pred_len=720, root_path='./dataset/', seed=15349, seq_len=96, target='OT', test_flop=False, train_epochs=10, train_only=False, use_amp=False, use_gpu=True, use_multi_gpu=False)
+Use GPU: cuda:0
+>>>>>>>start training : ETTh1_720_Informer_ETTh1_ftM_sl96_ll48_pl720_dm512_nh8_el2_dl1_df2048_fc3_ebtimeF_dtTrue_Exp_0_seed15349>>>>>>>>>>>>>>>>>>>>>>>>>>
+train 7825
+val 2161
+test 2161
+	iters: 100, epoch: 1 | loss: 0.5566814
+	speed: 0.0953s/iter; left time: 223.0192s
+	iters: 200, epoch: 1 | loss: 0.5440062
+	speed: 0.0648s/iter; left time: 145.2052s
+Epoch: 1 cost time: 18.894527912139893
+Epoch: 1, Steps: 244 | Train Loss: 0.5698445 Vali Loss: 1.7441282 Test Loss: 1.1687391
+Validation loss decreased (inf --> 1.744128).  Saving model ...
+Updating learning rate to 0.0001
+	iters: 100, epoch: 2 | loss: 0.5010257
+	speed: 0.1314s/iter; left time: 275.6381s
+	iters: 200, epoch: 2 | loss: 0.4533731
+	speed: 0.0649s/iter; left time: 129.6962s
+Epoch: 2 cost time: 15.855433940887451
+Epoch: 2, Steps: 244 | Train Loss: 0.4948297 Vali Loss: 1.6938236 Test Loss: 1.1743809
+Validation loss decreased (1.744128 --> 1.693824).  Saving model ...
+Updating learning rate to 5e-05
+	iters: 100, epoch: 3 | loss: 0.4638917
+	speed: 0.1334s/iter; left time: 247.1013s
+	iters: 200, epoch: 3 | loss: 0.4456820
+	speed: 0.0669s/iter; left time: 117.1918s
+Epoch: 3 cost time: 16.27900719642639
+Epoch: 3, Steps: 244 | Train Loss: 0.4596728 Vali Loss: 1.6809071 Test Loss: 1.1714984
+Validation loss decreased (1.693824 --> 1.680907).  Saving model ...
+Updating learning rate to 2.5e-05
+	iters: 100, epoch: 4 | loss: 0.4765029
+	speed: 0.1359s/iter; left time: 218.7395s
+	iters: 200, epoch: 4 | loss: 0.4198734
+	speed: 0.0654s/iter; left time: 98.6734s
+Epoch: 4 cost time: 16.08073401451111
+Epoch: 4, Steps: 244 | Train Loss: 0.4467178 Vali Loss: 1.6744000 Test Loss: 1.1715624
+Validation loss decreased (1.680907 --> 1.674400).  Saving model ...
+Updating learning rate to 1.25e-05
+	iters: 100, epoch: 5 | loss: 0.4406541
+	speed: 0.1314s/iter; left time: 179.3234s
+	iters: 200, epoch: 5 | loss: 0.4544987
+	speed: 0.0652s/iter; left time: 82.5050s
+Epoch: 5 cost time: 15.923555850982666
+Epoch: 5, Steps: 244 | Train Loss: 0.4405423 Vali Loss: 1.6654681 Test Loss: 1.1859881
+Validation loss decreased (1.674400 --> 1.665468).  Saving model ...
+Updating learning rate to 6.25e-06
+	iters: 100, epoch: 6 | loss: 0.4290394
+	speed: 0.1330s/iter; left time: 149.0766s
+	iters: 200, epoch: 6 | loss: 0.4280059
+	speed: 0.0654s/iter; left time: 66.7263s
+Epoch: 6 cost time: 15.940695762634277
+Epoch: 6, Steps: 244 | Train Loss: 0.4377911 Vali Loss: 1.6663501 Test Loss: 1.2114260
+EarlyStopping counter: 1 out of 3
+Updating learning rate to 3.125e-06
+	iters: 100, epoch: 7 | loss: 0.4052891
+	speed: 0.1296s/iter; left time: 113.6188s
+	iters: 200, epoch: 7 | loss: 0.4092342
+	speed: 0.0653s/iter; left time: 50.7590s
+Epoch: 7 cost time: 15.930311441421509
+Epoch: 7, Steps: 244 | Train Loss: 0.4362892 Vali Loss: 1.6667966 Test Loss: 1.2050105
+EarlyStopping counter: 2 out of 3
+Updating learning rate to 1.5625e-06
+	iters: 100, epoch: 8 | loss: 0.4231179
+	speed: 0.1297s/iter; left time: 82.0887s
+	iters: 200, epoch: 8 | loss: 0.4236352
+	speed: 0.0653s/iter; left time: 34.8206s
+Epoch: 8 cost time: 15.946362018585205
+Epoch: 8, Steps: 244 | Train Loss: 0.4349664 Vali Loss: 1.6691003 Test Loss: 1.2061826
+EarlyStopping counter: 3 out of 3
+Early stopping
+>>>>>>>testing : ETTh1_720_Informer_ETTh1_ftM_sl96_ll48_pl720_dm512_nh8_el2_dl1_df2048_fc3_ebtimeF_dtTrue_Exp_0_seed15349<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+test 2161
+mse:1.1823644638061523, mae:0.8566089272499084

@@ -1,0 +1,43 @@
+Args in experiment:
+Namespace(L=3, activation='gelu', base='legendre', batch_size=32, c_out=21, checkpoints='./checkpoints/', cross_activation='tanh', d_ff=2048, d_layers=1, d_model=512, data='custom', data_path='weather.csv', dec_in=21, des='Exp', devices='0,1', distil=True, do_predict=False, dropout=0.05, e_layers=2, embed='timeF', embed_type=0, enc_in=21, factor=3, features='M', freq='h', gpu=0, is_training=1, itr=1, label_len=48, learning_rate=0.0001, loss='mse', lradj='type1', mode_select='random', model='FEDformer', modes=64, moving_avg=[24], n_heads=8, num_workers=0, output_attention=False, patience=3, pred_len=720, root_path='../dataset', save_pred_values=False, seed=15227, seq_len=96, target='OT', task_id='weather', train_epochs=10, use_amp=False, use_gpu=True, use_multi_gpu=False, version='Fourier')
+Use GPU: cuda:0
+fourier enhanced block used!
+modes=64, index=[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47]
+fourier enhanced block used!
+modes=64, index=[5, 37, 42, 47, 57, 62, 63, 65, 66, 78, 79, 81, 82, 87, 92, 108, 109, 118, 131, 132, 134, 141, 142, 151, 155, 157, 163, 179, 181, 184, 185, 187, 199, 204, 209, 214, 215, 217, 218, 224, 231, 232, 249, 262, 265, 270, 272, 273, 274, 286, 292, 296, 308, 309, 310, 329, 334, 335, 342, 348, 349, 360, 366, 368]
+ fourier enhanced cross attention used!
+modes_q=64, index_q=[9, 11, 18, 28, 34, 52, 55, 56, 62, 65, 66, 67, 72, 79, 80, 103, 117, 119, 122, 131, 134, 137, 147, 154, 162, 167, 192, 194, 195, 199, 204, 215, 216, 226, 231, 237, 238, 242, 243, 244, 253, 257, 271, 274, 276, 280, 283, 289, 291, 308, 310, 316, 320, 321, 328, 335, 340, 342, 352, 356, 361, 362, 368, 380]
+modes_kv=48, index_kv=[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47]
+enc_modes: 48, dec_modes: 64
+>>>>>>>start training : weather_FEDformer_random_modes64_custom_ftM_sl96_ll48_pl720_dm512_nh8_el2_dl1_df2048_fc3_ebtimeF_dtTrue_Exp_0_seed15227>>>>>>>>>>>>>>>>>>>>>>>>>>
+train 36072
+val 4551
+test 9820
+Total number of trainable parameters: 16374821
+Total number of parameters: 16374821
+Epoch: 1 cost time: 351.0019211769104
+Epoch: 1, Steps: 1127 | Train Loss: 0.7152351 Vali Loss: 0.7614681 Test Loss: 0.4166640
+Validation loss decreased (inf --> 0.761468).  Saving model ...
+Updating learning rate to 0.0001
+Epoch: 2 cost time: 348.0125050544739
+Epoch: 2, Steps: 1127 | Train Loss: 0.6818568 Vali Loss: 0.7474369 Test Loss: 0.4025512
+Validation loss decreased (0.761468 --> 0.747437).  Saving model ...
+Updating learning rate to 5e-05
+Epoch: 3 cost time: 348.3902826309204
+Epoch: 3, Steps: 1127 | Train Loss: 0.6676337 Vali Loss: 0.7522155 Test Loss: 0.4127628
+EarlyStopping counter: 1 out of 3
+Updating learning rate to 2.5e-05
+Epoch: 4 cost time: 349.12128615379333
+Epoch: 4, Steps: 1127 | Train Loss: 0.6585903 Vali Loss: 0.7561916 Test Loss: 0.4257466
+EarlyStopping counter: 2 out of 3
+Updating learning rate to 1.25e-05
+Epoch: 5 cost time: 349.2307164669037
+Epoch: 5, Steps: 1127 | Train Loss: 0.6543793 Vali Loss: 0.7619071 Test Loss: 0.4391997
+EarlyStopping counter: 3 out of 3
+Early stopping
+Total training time: 1852.2902 seconds
+>>>>>>>testing : weather_FEDformer_random_modes64_custom_ftM_sl96_ll48_pl720_dm512_nh8_el2_dl1_df2048_fc3_ebtimeF_dtTrue_Exp_0_seed15227<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+test 9820
+test shape: (306, 32, 720, 21) (306, 32, 720, 21)
+test shape: (9792, 720, 21) (9792, 720, 21)
+mse:0.4025517404079437, mae:0.41407081484794617

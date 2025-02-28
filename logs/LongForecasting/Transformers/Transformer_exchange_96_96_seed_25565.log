@@ -1,0 +1,34 @@
+Args in experiment:
+Namespace(activation='gelu', batch_size=32, c_out=8, checkpoints='./checkpoints/', d_ff=2048, d_layers=1, d_model=512, data='custom', data_path='exchange_rate.csv', dec_in=8, des='Exp', devices='0,1,2,3', distil=True, do_predict=False, dropout=0.05, e_layers=2, embed='timeF', embed_type=0, enc_in=8, factor=3, features='M', freq='h', gpu=0, individual=False, is_training=1, itr=1, label_len=48, learning_rate=0.0001, loss='mse', lradj='type1', model='Transformer', model_id='exchange_96', moving_avg=25, n_heads=8, num_workers=0, output_attention=False, patience=3, pred_len=96, root_path='./dataset/', seed=25565, seq_len=96, target='OT', test_flop=False, train_epochs=10, train_only=False, use_amp=False, use_gpu=True, use_multi_gpu=False)
+Use GPU: cuda:0
+>>>>>>>start training : exchange_96_Transformer_custom_ftM_sl96_ll48_pl96_dm512_nh8_el2_dl1_df2048_fc3_ebtimeF_dtTrue_Exp_0_seed25565>>>>>>>>>>>>>>>>>>>>>>>>>>
+train 5120
+val 665
+test 1422
+	iters: 100, epoch: 1 | loss: 0.0862212
+	speed: 0.0554s/iter; left time: 83.1206s
+Epoch: 1 cost time: 7.03497838973999
+Epoch: 1, Steps: 160 | Train Loss: 0.1362996 Vali Loss: 0.5091926 Test Loss: 0.6307537
+Validation loss decreased (inf --> 0.509193).  Saving model ...
+Updating learning rate to 0.0001
+	iters: 100, epoch: 2 | loss: 0.0445460
+	speed: 0.0463s/iter; left time: 62.1032s
+Epoch: 2 cost time: 3.9612886905670166
+Epoch: 2, Steps: 160 | Train Loss: 0.0561630 Vali Loss: 0.6327235 Test Loss: 0.7369843
+EarlyStopping counter: 1 out of 3
+Updating learning rate to 5e-05
+	iters: 100, epoch: 3 | loss: 0.0345507
+	speed: 0.0446s/iter; left time: 52.7226s
+Epoch: 3 cost time: 3.955167293548584
+Epoch: 3, Steps: 160 | Train Loss: 0.0389526 Vali Loss: 0.5821318 Test Loss: 0.7918537
+EarlyStopping counter: 2 out of 3
+Updating learning rate to 2.5e-05
+	iters: 100, epoch: 4 | loss: 0.0335851
+	speed: 0.0446s/iter; left time: 45.5733s
+Epoch: 4 cost time: 3.957399368286133
+Epoch: 4, Steps: 160 | Train Loss: 0.0333817 Vali Loss: 0.6172940 Test Loss: 0.8357186
+EarlyStopping counter: 3 out of 3
+Early stopping
+>>>>>>>testing : exchange_96_Transformer_custom_ftM_sl96_ll48_pl96_dm512_nh8_el2_dl1_df2048_fc3_ebtimeF_dtTrue_Exp_0_seed25565<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+test 1422
+mse:0.6294816732406616, mae:0.6146571040153503

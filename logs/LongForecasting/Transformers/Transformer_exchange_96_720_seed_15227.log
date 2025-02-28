@@ -1,0 +1,34 @@
+Args in experiment:
+Namespace(activation='gelu', batch_size=32, c_out=8, checkpoints='./checkpoints/', d_ff=2048, d_layers=1, d_model=512, data='custom', data_path='exchange_rate.csv', dec_in=8, des='Exp', devices='0,1,2,3', distil=True, do_predict=False, dropout=0.05, e_layers=2, embed='timeF', embed_type=0, enc_in=8, factor=3, features='M', freq='h', gpu=0, individual=False, is_training=1, itr=1, label_len=48, learning_rate=0.0001, loss='mse', lradj='type1', model='Transformer', model_id='exchange_720', moving_avg=25, n_heads=8, num_workers=0, output_attention=False, patience=3, pred_len=720, root_path='./dataset/', seed=15227, seq_len=96, target='OT', test_flop=False, train_epochs=10, train_only=False, use_amp=False, use_gpu=True, use_multi_gpu=False)
+Use GPU: cuda:0
+>>>>>>>start training : exchange_720_Transformer_custom_ftM_sl96_ll48_pl720_dm512_nh8_el2_dl1_df2048_fc3_ebtimeF_dtTrue_Exp_0_seed15227>>>>>>>>>>>>>>>>>>>>>>>>>>
+train 4496
+val 41
+test 798
+	iters: 100, epoch: 1 | loss: 0.1138501
+	speed: 0.1221s/iter; left time: 158.9160s
+Epoch: 1 cost time: 15.891195297241211
+Epoch: 1, Steps: 140 | Train Loss: 0.2507988 Vali Loss: 2.5883603 Test Loss: 2.7831562
+Validation loss decreased (inf --> 2.588360).  Saving model ...
+Updating learning rate to 0.0001
+	iters: 100, epoch: 2 | loss: 0.0802680
+	speed: 0.1393s/iter; left time: 161.7145s
+Epoch: 2 cost time: 12.83173418045044
+Epoch: 2, Steps: 140 | Train Loss: 0.0836170 Vali Loss: 3.2531707 Test Loss: 2.9279525
+EarlyStopping counter: 1 out of 3
+Updating learning rate to 5e-05
+	iters: 100, epoch: 3 | loss: 0.0610407
+	speed: 0.1376s/iter; left time: 140.5228s
+Epoch: 3 cost time: 12.854459047317505
+Epoch: 3, Steps: 140 | Train Loss: 0.0630108 Vali Loss: 3.1150153 Test Loss: 2.6625309
+EarlyStopping counter: 2 out of 3
+Updating learning rate to 2.5e-05
+	iters: 100, epoch: 4 | loss: 0.0540882
+	speed: 0.1383s/iter; left time: 121.8297s
+Epoch: 4 cost time: 12.890970706939697
+Epoch: 4, Steps: 140 | Train Loss: 0.0568044 Vali Loss: 3.1802607 Test Loss: 2.6422567
+EarlyStopping counter: 3 out of 3
+Early stopping
+>>>>>>>testing : exchange_720_Transformer_custom_ftM_sl96_ll48_pl720_dm512_nh8_el2_dl1_df2048_fc3_ebtimeF_dtTrue_Exp_0_seed15227<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+test 798
+mse:2.7839853763580322, mae:1.381823182106018

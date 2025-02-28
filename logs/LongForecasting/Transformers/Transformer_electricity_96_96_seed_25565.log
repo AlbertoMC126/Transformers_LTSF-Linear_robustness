@@ -1,0 +1,150 @@
+Args in experiment:
+Namespace(activation='gelu', batch_size=32, c_out=321, checkpoints='./checkpoints/', d_ff=2048, d_layers=1, d_model=512, data='custom', data_path='electricity.csv', dec_in=321, des='Exp', devices='0,1,2,3', distil=True, do_predict=False, dropout=0.05, e_layers=2, embed='timeF', embed_type=0, enc_in=321, factor=3, features='M', freq='h', gpu=0, individual=False, is_training=1, itr=1, label_len=48, learning_rate=0.0001, loss='mse', lradj='type1', model='Transformer', model_id='electricity_96', moving_avg=25, n_heads=8, num_workers=0, output_attention=False, patience=3, pred_len=96, root_path='./dataset/', seed=25565, seq_len=96, target='OT', test_flop=False, train_epochs=10, train_only=False, use_amp=False, use_gpu=True, use_multi_gpu=False)
+Use GPU: cuda:0
+>>>>>>>start training : electricity_96_Transformer_custom_ftM_sl96_ll48_pl96_dm512_nh8_el2_dl1_df2048_fc3_ebtimeF_dtTrue_Exp_0_seed25565>>>>>>>>>>>>>>>>>>>>>>>>>>
+train 18221
+val 2537
+test 5165
+	iters: 100, epoch: 1 | loss: 0.3332645
+	speed: 0.0574s/iter; left time: 321.1876s
+	iters: 200, epoch: 1 | loss: 0.2483338
+	speed: 0.0276s/iter; left time: 151.8099s
+	iters: 300, epoch: 1 | loss: 0.2193215
+	speed: 0.0276s/iter; left time: 148.7184s
+	iters: 400, epoch: 1 | loss: 0.1948640
+	speed: 0.0276s/iter; left time: 146.0211s
+	iters: 500, epoch: 1 | loss: 0.1651210
+	speed: 0.0276s/iter; left time: 143.3045s
+Epoch: 1 cost time: 18.70206880569458
+Epoch: 1, Steps: 569 | Train Loss: 0.2739533 Vali Loss: 0.1966984 Test Loss: 0.2696152
+Validation loss decreased (inf --> 0.196698).  Saving model ...
+Updating learning rate to 0.0001
+	iters: 100, epoch: 2 | loss: 0.1556731
+	speed: 0.0946s/iter; left time: 475.0652s
+	iters: 200, epoch: 2 | loss: 0.1519510
+	speed: 0.0277s/iter; left time: 136.4764s
+	iters: 300, epoch: 2 | loss: 0.1664224
+	speed: 0.0277s/iter; left time: 133.6937s
+	iters: 400, epoch: 2 | loss: 0.1392009
+	speed: 0.0278s/iter; left time: 131.1497s
+	iters: 500, epoch: 2 | loss: 0.1481609
+	speed: 0.0277s/iter; left time: 127.9564s
+Epoch: 2 cost time: 15.779325723648071
+Epoch: 2, Steps: 569 | Train Loss: 0.1469444 Vali Loss: 0.1921041 Test Loss: 0.2582064
+Validation loss decreased (0.196698 --> 0.192104).  Saving model ...
+Updating learning rate to 5e-05
+	iters: 100, epoch: 3 | loss: 0.1294469
+	speed: 0.0936s/iter; left time: 416.8969s
+	iters: 200, epoch: 3 | loss: 0.1328287
+	speed: 0.0277s/iter; left time: 120.5114s
+	iters: 300, epoch: 3 | loss: 0.1284060
+	speed: 0.0276s/iter; left time: 117.5259s
+	iters: 400, epoch: 3 | loss: 0.1166028
+	speed: 0.0277s/iter; left time: 115.0547s
+	iters: 500, epoch: 3 | loss: 0.1251065
+	speed: 0.0277s/iter; left time: 112.1385s
+Epoch: 3 cost time: 15.759471416473389
+Epoch: 3, Steps: 569 | Train Loss: 0.1250171 Vali Loss: 0.1941208 Test Loss: 0.2598602
+EarlyStopping counter: 1 out of 3
+Updating learning rate to 2.5e-05
+	iters: 100, epoch: 4 | loss: 0.1146476
+	speed: 0.0913s/iter; left time: 354.7913s
+	iters: 200, epoch: 4 | loss: 0.1108456
+	speed: 0.0277s/iter; left time: 104.9026s
+	iters: 300, epoch: 4 | loss: 0.1158106
+	speed: 0.0276s/iter; left time: 101.7049s
+	iters: 400, epoch: 4 | loss: 0.1171694
+	speed: 0.0277s/iter; left time: 99.1147s
+	iters: 500, epoch: 4 | loss: 0.1180051
+	speed: 0.0276s/iter; left time: 96.2921s
+Epoch: 4 cost time: 15.73384141921997
+Epoch: 4, Steps: 569 | Train Loss: 0.1158678 Vali Loss: 0.1903076 Test Loss: 0.2574435
+Validation loss decreased (0.192104 --> 0.190308).  Saving model ...
+Updating learning rate to 1.25e-05
+	iters: 100, epoch: 5 | loss: 0.1070607
+	speed: 0.0944s/iter; left time: 312.9856s
+	iters: 200, epoch: 5 | loss: 0.1136917
+	speed: 0.0277s/iter; left time: 89.0412s
+	iters: 300, epoch: 5 | loss: 0.1070477
+	speed: 0.0277s/iter; left time: 86.4027s
+	iters: 400, epoch: 5 | loss: 0.1075615
+	speed: 0.0278s/iter; left time: 83.6840s
+	iters: 500, epoch: 5 | loss: 0.1131107
+	speed: 0.0279s/iter; left time: 81.2643s
+Epoch: 5 cost time: 15.789758920669556
+Epoch: 5, Steps: 569 | Train Loss: 0.1117174 Vali Loss: 0.1905323 Test Loss: 0.2574266
+EarlyStopping counter: 1 out of 3
+Updating learning rate to 6.25e-06
+	iters: 100, epoch: 6 | loss: 0.1111063
+	speed: 0.0918s/iter; left time: 252.0054s
+	iters: 200, epoch: 6 | loss: 0.1129658
+	speed: 0.0278s/iter; left time: 73.5991s
+	iters: 300, epoch: 6 | loss: 0.1097024
+	speed: 0.0278s/iter; left time: 70.8170s
+	iters: 400, epoch: 6 | loss: 0.1077332
+	speed: 0.0278s/iter; left time: 68.0414s
+	iters: 500, epoch: 6 | loss: 0.1184621
+	speed: 0.0277s/iter; left time: 65.0479s
+Epoch: 6 cost time: 15.813647031784058
+Epoch: 6, Steps: 569 | Train Loss: 0.1095922 Vali Loss: 0.1887494 Test Loss: 0.2576382
+Validation loss decreased (0.190308 --> 0.188749).  Saving model ...
+Updating learning rate to 3.125e-06
+	iters: 100, epoch: 7 | loss: 0.1028060
+	speed: 0.0943s/iter; left time: 205.2566s
+	iters: 200, epoch: 7 | loss: 0.1081143
+	speed: 0.0278s/iter; left time: 57.7024s
+	iters: 300, epoch: 7 | loss: 0.1097394
+	speed: 0.0279s/iter; left time: 55.1802s
+	iters: 400, epoch: 7 | loss: 0.1097417
+	speed: 0.0279s/iter; left time: 52.4460s
+	iters: 500, epoch: 7 | loss: 0.1105063
+	speed: 0.0279s/iter; left time: 49.5606s
+Epoch: 7 cost time: 15.84351897239685
+Epoch: 7, Steps: 569 | Train Loss: 0.1084609 Vali Loss: 0.1892033 Test Loss: 0.2573812
+EarlyStopping counter: 1 out of 3
+Updating learning rate to 1.5625e-06
+	iters: 100, epoch: 8 | loss: 0.1101674
+	speed: 0.0916s/iter; left time: 147.2363s
+	iters: 200, epoch: 8 | loss: 0.1022621
+	speed: 0.0278s/iter; left time: 41.9490s
+	iters: 300, epoch: 8 | loss: 0.1088650
+	speed: 0.0279s/iter; left time: 39.2180s
+	iters: 400, epoch: 8 | loss: 0.1053409
+	speed: 0.0278s/iter; left time: 36.3721s
+	iters: 500, epoch: 8 | loss: 0.1056030
+	speed: 0.0280s/iter; left time: 33.7717s
+Epoch: 8 cost time: 15.860342741012573
+Epoch: 8, Steps: 569 | Train Loss: 0.1079179 Vali Loss: 0.1889124 Test Loss: 0.2573579
+EarlyStopping counter: 2 out of 3
+Updating learning rate to 7.8125e-07
+	iters: 100, epoch: 9 | loss: 0.1166196
+	speed: 0.0915s/iter; left time: 95.1038s
+	iters: 200, epoch: 9 | loss: 0.1016721
+	speed: 0.0277s/iter; left time: 26.0435s
+	iters: 300, epoch: 9 | loss: 0.1045158
+	speed: 0.0277s/iter; left time: 23.2343s
+	iters: 400, epoch: 9 | loss: 0.1059812
+	speed: 0.0278s/iter; left time: 20.5202s
+	iters: 500, epoch: 9 | loss: 0.1049128
+	speed: 0.0277s/iter; left time: 17.7242s
+Epoch: 9 cost time: 15.780449867248535
+Epoch: 9, Steps: 569 | Train Loss: 0.1075597 Vali Loss: 0.1883644 Test Loss: 0.2573620
+Validation loss decreased (0.188749 --> 0.188364).  Saving model ...
+Updating learning rate to 3.90625e-07
+	iters: 100, epoch: 10 | loss: 0.1014935
+	speed: 0.0940s/iter; left time: 44.1655s
+	iters: 200, epoch: 10 | loss: 0.1077682
+	speed: 0.0278s/iter; left time: 10.2953s
+	iters: 300, epoch: 10 | loss: 0.1166503
+	speed: 0.0279s/iter; left time: 7.5250s
+	iters: 400, epoch: 10 | loss: 0.1045025
+	speed: 0.0278s/iter; left time: 4.7309s
+	iters: 500, epoch: 10 | loss: 0.1118867
+	speed: 0.0279s/iter; left time: 1.9508s
+Epoch: 10 cost time: 15.828458070755005
+Epoch: 10, Steps: 569 | Train Loss: 0.1073682 Vali Loss: 0.1885606 Test Loss: 0.2573134
+EarlyStopping counter: 1 out of 3
+Updating learning rate to 1.953125e-07
+>>>>>>>testing : electricity_96_Transformer_custom_ftM_sl96_ll48_pl96_dm512_nh8_el2_dl1_df2048_fc3_ebtimeF_dtTrue_Exp_0_seed25565<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+test 5165
+mse:0.25687074661254883, mae:0.3573233485221863

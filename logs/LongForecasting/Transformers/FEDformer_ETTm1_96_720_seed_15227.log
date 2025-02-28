@@ -1,0 +1,63 @@
+Args in experiment:
+Namespace(L=3, activation='gelu', base='legendre', batch_size=32, c_out=7, checkpoints='./checkpoints/', cross_activation='tanh', d_ff=2048, d_layers=1, d_model=512, data='ETTm1', data_path='ETTm1.csv', dec_in=7, des='Exp', devices='0,1', distil=True, do_predict=False, dropout=0.05, e_layers=2, embed='timeF', embed_type=0, enc_in=7, factor=3, features='M', freq='h', gpu=0, is_training=1, itr=1, label_len=48, learning_rate=0.0001, loss='mse', lradj='type1', mode_select='random', model='FEDformer', modes=64, moving_avg=[24], n_heads=8, num_workers=0, output_attention=False, patience=3, pred_len=720, root_path='../dataset', save_pred_values=False, seed=15227, seq_len=96, target='OT', task_id='ETTm1', train_epochs=10, use_amp=False, use_gpu=True, use_multi_gpu=False, version='Fourier')
+Use GPU: cuda:0
+fourier enhanced block used!
+modes=64, index=[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47]
+fourier enhanced block used!
+modes=64, index=[5, 37, 42, 47, 57, 62, 63, 65, 66, 78, 79, 81, 82, 87, 92, 108, 109, 118, 131, 132, 134, 141, 142, 151, 155, 157, 163, 179, 181, 184, 185, 187, 199, 204, 209, 214, 215, 217, 218, 224, 231, 232, 249, 262, 265, 270, 272, 273, 274, 286, 292, 296, 308, 309, 310, 329, 334, 335, 342, 348, 349, 360, 366, 368]
+ fourier enhanced cross attention used!
+modes_q=64, index_q=[9, 11, 18, 28, 34, 52, 55, 56, 62, 65, 66, 67, 72, 79, 80, 103, 117, 119, 122, 131, 134, 137, 147, 154, 162, 167, 192, 194, 195, 199, 204, 215, 216, 226, 231, 237, 238, 242, 243, 244, 253, 257, 271, 274, 276, 280, 283, 289, 291, 308, 310, 316, 320, 321, 328, 335, 340, 342, 352, 356, 361, 362, 368, 380]
+modes_kv=48, index_kv=[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47]
+enc_modes: 48, dec_modes: 64
+>>>>>>>start training : ETTm1_FEDformer_random_modes64_ETTm1_ftM_sl96_ll48_pl720_dm512_nh8_el2_dl1_df2048_fc3_ebtimeF_dtTrue_Exp_0_seed15227>>>>>>>>>>>>>>>>>>>>>>>>>>
+train 33745
+val 10801
+test 10801
+Total number of trainable parameters: 16303127
+Total number of parameters: 16303127
+Epoch: 1 cost time: 327.83997082710266
+Epoch: 1, Steps: 1054 | Train Loss: 0.5213277 Vali Loss: 1.0395166 Test Loss: 0.5174853
+Validation loss decreased (inf --> 1.039517).  Saving model ...
+Updating learning rate to 0.0001
+Epoch: 2 cost time: 324.44498229026794
+Epoch: 2, Steps: 1054 | Train Loss: 0.4821583 Vali Loss: 1.0283368 Test Loss: 0.5056060
+Validation loss decreased (1.039517 --> 1.028337).  Saving model ...
+Updating learning rate to 5e-05
+Epoch: 3 cost time: 324.34393978118896
+Epoch: 3, Steps: 1054 | Train Loss: 0.4740261 Vali Loss: 1.0282925 Test Loss: 0.5022659
+Validation loss decreased (1.028337 --> 1.028293).  Saving model ...
+Updating learning rate to 2.5e-05
+Epoch: 4 cost time: 324.2893223762512
+Epoch: 4, Steps: 1054 | Train Loss: 0.4704647 Vali Loss: 1.0240731 Test Loss: 0.4988844
+Validation loss decreased (1.028293 --> 1.024073).  Saving model ...
+Updating learning rate to 1.25e-05
+Epoch: 5 cost time: 324.4001097679138
+Epoch: 5, Steps: 1054 | Train Loss: 0.4685962 Vali Loss: 1.0242701 Test Loss: 0.4982601
+EarlyStopping counter: 1 out of 3
+Updating learning rate to 6.25e-06
+Epoch: 6 cost time: 324.38152861595154
+Epoch: 6, Steps: 1054 | Train Loss: 0.4676381 Vali Loss: 1.0237873 Test Loss: 0.4972041
+Validation loss decreased (1.024073 --> 1.023787).  Saving model ...
+Updating learning rate to 3.125e-06
+Epoch: 7 cost time: 324.5019898414612
+Epoch: 7, Steps: 1054 | Train Loss: 0.4671322 Vali Loss: 1.0235420 Test Loss: 0.4974862
+Validation loss decreased (1.023787 --> 1.023542).  Saving model ...
+Updating learning rate to 1.5625e-06
+Epoch: 8 cost time: 324.47530722618103
+Epoch: 8, Steps: 1054 | Train Loss: 0.4669587 Vali Loss: 1.0230405 Test Loss: 0.4972631
+Validation loss decreased (1.023542 --> 1.023041).  Saving model ...
+Updating learning rate to 7.8125e-07
+Epoch: 9 cost time: 324.3692293167114
+Epoch: 9, Steps: 1054 | Train Loss: 0.4668048 Vali Loss: 1.0225927 Test Loss: 0.4973393
+Validation loss decreased (1.023041 --> 1.022593).  Saving model ...
+Updating learning rate to 3.90625e-07
+Epoch: 10 cost time: 324.48906683921814
+Epoch: 10, Steps: 1054 | Train Loss: 0.4666810 Vali Loss: 1.0237751 Test Loss: 0.4973245
+EarlyStopping counter: 1 out of 3
+Updating learning rate to 1.953125e-07
+Total training time: 3546.9971 seconds
+>>>>>>>testing : ETTm1_FEDformer_random_modes64_ETTm1_ftM_sl96_ll48_pl720_dm512_nh8_el2_dl1_df2048_fc3_ebtimeF_dtTrue_Exp_0_seed15227<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+test 10801
+test shape: (337, 32, 720, 7) (337, 32, 720, 7)
+test shape: (10784, 720, 7) (10784, 720, 7)
+mse:0.4973384737968445, mae:0.47761067748069763

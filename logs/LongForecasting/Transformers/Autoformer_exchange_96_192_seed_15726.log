@@ -1,0 +1,34 @@
+Args in experiment:
+Namespace(activation='gelu', batch_size=32, c_out=8, checkpoints='./checkpoints/', d_ff=2048, d_layers=1, d_model=512, data='custom', data_path='exchange_rate.csv', dec_in=8, des='Exp', devices='0,1,2,3', distil=True, do_predict=False, dropout=0.05, e_layers=2, embed='timeF', embed_type=0, enc_in=8, factor=3, features='M', freq='h', gpu=0, individual=False, is_training=1, itr=1, label_len=48, learning_rate=0.0001, loss='mse', lradj='type1', model='Autoformer', model_id='exchange_192', moving_avg=25, n_heads=8, num_workers=0, output_attention=False, patience=3, pred_len=192, root_path='./dataset/', seed=15726, seq_len=96, target='OT', test_flop=False, train_epochs=10, train_only=False, use_amp=False, use_gpu=True, use_multi_gpu=False)
+Use GPU: cuda:0
+>>>>>>>start training : exchange_192_Autoformer_custom_ftM_sl96_ll48_pl192_dm512_nh8_el2_dl1_df2048_fc3_ebtimeF_dtTrue_Exp_0_seed15726>>>>>>>>>>>>>>>>>>>>>>>>>>
+train 5024
+val 569
+test 1326
+	iters: 100, epoch: 1 | loss: 0.3642298
+	speed: 0.0959s/iter; left time: 141.0051s
+Epoch: 1 cost time: 13.127121210098267
+Epoch: 1, Steps: 157 | Train Loss: 0.3490241 Vali Loss: 0.2908188 Test Loss: 0.2786848
+Validation loss decreased (inf --> 0.290819).  Saving model ...
+Updating learning rate to 0.0001
+	iters: 100, epoch: 2 | loss: 0.2802329
+	speed: 0.1229s/iter; left time: 161.4552s
+Epoch: 2 cost time: 9.638218641281128
+Epoch: 2, Steps: 157 | Train Loss: 0.3161630 Vali Loss: 0.2912480 Test Loss: 0.5090693
+EarlyStopping counter: 1 out of 3
+Updating learning rate to 5e-05
+	iters: 100, epoch: 3 | loss: 0.3792980
+	speed: 0.1199s/iter; left time: 138.6765s
+Epoch: 3 cost time: 9.643229484558105
+Epoch: 3, Steps: 157 | Train Loss: 0.2757318 Vali Loss: 0.5389830 Test Loss: 1.2752310
+EarlyStopping counter: 2 out of 3
+Updating learning rate to 2.5e-05
+	iters: 100, epoch: 4 | loss: 0.2615169
+	speed: 0.1195s/iter; left time: 119.5325s
+Epoch: 4 cost time: 9.648953676223755
+Epoch: 4, Steps: 157 | Train Loss: 0.2587379 Vali Loss: 0.4360466 Test Loss: 1.1477057
+EarlyStopping counter: 3 out of 3
+Early stopping
+>>>>>>>testing : exchange_192_Autoformer_custom_ftM_sl96_ll48_pl192_dm512_nh8_el2_dl1_df2048_fc3_ebtimeF_dtTrue_Exp_0_seed15726<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+test 1326
+mse:0.27980104088783264, mae:0.3843931257724762

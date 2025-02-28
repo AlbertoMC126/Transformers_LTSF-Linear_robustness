@@ -1,0 +1,77 @@
+Args in experiment:
+Namespace(activation='gelu', batch_size=32, c_out=7, checkpoints='./checkpoints/', d_ff=2048, d_layers=1, d_model=512, data='ETTh2', data_path='ETTh2.csv', dec_in=7, des='Exp', devices='0,1,2,3', distil=True, do_predict=False, dropout=0.05, e_layers=2, embed='timeF', embed_type=0, enc_in=7, factor=1, features='M', freq='h', gpu=0, individual=True, is_training=1, itr=1, label_len=48, learning_rate=0.005, loss='mse', lradj='type1', model='DLinear', model_id='ETTh2_336_720', moving_avg=25, n_heads=8, num_workers=0, output_attention=False, patience=5, pred_len=720, root_path='./dataset/', save_pred_values=False, seed=15227, seq_len=336, target='OT', test_flop=False, train_epochs=20, train_only=False, use_amp=False, use_gpu=False, use_multi_gpu=False)
+Use CPU
+>>>>>>>start training : ETTh2_336_720_DLinear_ETTh2_ftM_sl336_ll48_pl720_dm512_nh8_el2_dl1_df2048_fc1_ebtimeF_dtTrue_Exp_0_seed15227>>>>>>>>>>>>>>>>>>>>>>>>>>
+train 7585
+val 2161
+test 2161
+Total number of trainable parameters: 3396960
+Total number of parameters: 3396960
+	iters: 100, epoch: 1 | loss: 0.9853058
+	speed: 0.0720s/iter; left time: 334.3073s
+	iters: 200, epoch: 1 | loss: 0.7611948
+	speed: 0.0729s/iter; left time: 330.8549s
+Epoch: 1 cost time: 17.222172498703003
+Epoch: 1, Steps: 237 | Train Loss: 0.7966955 Vali Loss: 0.8237583 Test Loss: 1.6380767
+Validation loss decreased (inf --> 0.823758).  Saving model ...
+Updating learning rate to 0.005
+	iters: 100, epoch: 2 | loss: 0.5115874
+	speed: 0.1165s/iter; left time: 513.0891s
+	iters: 200, epoch: 2 | loss: 0.9461468
+	speed: 0.0723s/iter; left time: 311.2805s
+Epoch: 2 cost time: 17.128204822540283
+Epoch: 2, Steps: 237 | Train Loss: 0.7760434 Vali Loss: 0.7773541 Test Loss: 1.4365811
+Validation loss decreased (0.823758 --> 0.777354).  Saving model ...
+Updating learning rate to 0.0025
+	iters: 100, epoch: 3 | loss: 0.7846060
+	speed: 0.1182s/iter; left time: 492.4892s
+	iters: 200, epoch: 3 | loss: 0.6960552
+	speed: 0.0737s/iter; left time: 299.6759s
+Epoch: 3 cost time: 17.09445548057556
+Epoch: 3, Steps: 237 | Train Loss: 0.6970052 Vali Loss: 0.7424214 Test Loss: 0.7593117
+Validation loss decreased (0.777354 --> 0.742421).  Saving model ...
+Updating learning rate to 0.00125
+	iters: 100, epoch: 4 | loss: 0.5504651
+	speed: 0.1143s/iter; left time: 449.2035s
+	iters: 200, epoch: 4 | loss: 0.7910752
+	speed: 0.0740s/iter; left time: 283.4304s
+Epoch: 4 cost time: 16.912041664123535
+Epoch: 4, Steps: 237 | Train Loss: 0.6591985 Vali Loss: 0.8033847 Test Loss: 1.2313812
+EarlyStopping counter: 1 out of 5
+Updating learning rate to 0.000625
+	iters: 100, epoch: 5 | loss: 0.4222584
+	speed: 0.1114s/iter; left time: 411.2746s
+	iters: 200, epoch: 5 | loss: 0.5010704
+	speed: 0.0706s/iter; left time: 253.8291s
+Epoch: 5 cost time: 16.54579997062683
+Epoch: 5, Steps: 237 | Train Loss: 0.6422662 Vali Loss: 0.7633046 Test Loss: 0.9583211
+EarlyStopping counter: 2 out of 5
+Updating learning rate to 0.0003125
+	iters: 100, epoch: 6 | loss: 0.8655711
+	speed: 0.1113s/iter; left time: 384.5674s
+	iters: 200, epoch: 6 | loss: 0.6062031
+	speed: 0.0724s/iter; left time: 242.9691s
+Epoch: 6 cost time: 16.4263858795166
+Epoch: 6, Steps: 237 | Train Loss: 0.6333075 Vali Loss: 0.7591476 Test Loss: 1.1199979
+EarlyStopping counter: 3 out of 5
+Updating learning rate to 0.00015625
+	iters: 100, epoch: 7 | loss: 0.7058282
+	speed: 0.1124s/iter; left time: 361.7973s
+	iters: 200, epoch: 7 | loss: 0.3801223
+	speed: 0.0743s/iter; left time: 231.8425s
+Epoch: 7 cost time: 16.8175790309906
+Epoch: 7, Steps: 237 | Train Loss: 0.6287096 Vali Loss: 0.7866497 Test Loss: 1.0618877
+EarlyStopping counter: 4 out of 5
+Updating learning rate to 7.8125e-05
+	iters: 100, epoch: 8 | loss: 0.9032003
+	speed: 0.1137s/iter; left time: 339.1221s
+	iters: 200, epoch: 8 | loss: 0.6750242
+	speed: 0.0723s/iter; left time: 208.3891s
+Epoch: 8 cost time: 16.582314014434814
+Epoch: 8, Steps: 237 | Train Loss: 0.6265755 Vali Loss: 0.7654419 Test Loss: 1.0525899
+EarlyStopping counter: 5 out of 5
+Early stopping
+Total training time: 149.9291 seconds
+>>>>>>>testing : ETTh2_336_720_DLinear_ETTh2_ftM_sl336_ll48_pl720_dm512_nh8_el2_dl1_df2048_fc1_ebtimeF_dtTrue_Exp_0_seed15227<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+test 2161
+mse:0.7586538195610046, mae:0.6116050481796265

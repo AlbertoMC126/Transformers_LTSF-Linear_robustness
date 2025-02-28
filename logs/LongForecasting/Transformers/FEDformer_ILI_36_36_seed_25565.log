@@ -1,0 +1,63 @@
+Args in experiment:
+Namespace(L=3, activation='gelu', base='legendre', batch_size=32, c_out=7, checkpoints='./checkpoints/', cross_activation='tanh', d_ff=2048, d_layers=1, d_model=512, data='custom', data_path='national_illness.csv', dec_in=7, des='Exp', devices='0,1', distil=True, do_predict=False, dropout=0.05, e_layers=2, embed='timeF', embed_type=0, enc_in=7, factor=3, features='M', freq='h', gpu=0, is_training=1, itr=1, label_len=18, learning_rate=0.0001, loss='mse', lradj='type1', mode_select='random', model='FEDformer', modes=64, moving_avg=[24], n_heads=8, num_workers=0, output_attention=False, patience=3, pred_len=36, root_path='../dataset', save_pred_values=False, seed=25565, seq_len=36, target='OT', task_id='ili', train_epochs=10, use_amp=False, use_gpu=True, use_multi_gpu=False, version='Fourier')
+Use GPU: cuda:0
+fourier enhanced block used!
+modes=64, index=[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17]
+fourier enhanced block used!
+modes=64, index=[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26]
+ fourier enhanced cross attention used!
+modes_q=27, index_q=[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26]
+modes_kv=18, index_kv=[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17]
+enc_modes: 18, dec_modes: 27
+>>>>>>>start training : ili_FEDformer_random_modes64_custom_ftM_sl36_ll18_pl36_dm512_nh8_el2_dl1_df2048_fc3_ebtimeF_dtTrue_Exp_0_seed25565>>>>>>>>>>>>>>>>>>>>>>>>>>
+train 605
+val 62
+test 158
+Total number of trainable parameters: 12895255
+Total number of parameters: 12895255
+Epoch: 1 cost time: 4.574169635772705
+Epoch: 1, Steps: 18 | Train Loss: 0.9824038 Vali Loss: 0.5924992 Test Loss: 3.5897183
+Validation loss decreased (inf --> 0.592499).  Saving model ...
+Updating learning rate to 0.0001
+Epoch: 2 cost time: 0.8795671463012695
+Epoch: 2, Steps: 18 | Train Loss: 0.7486724 Vali Loss: 0.3931034 Test Loss: 2.9572253
+Validation loss decreased (0.592499 --> 0.393103).  Saving model ...
+Updating learning rate to 5e-05
+Epoch: 3 cost time: 0.8669838905334473
+Epoch: 3, Steps: 18 | Train Loss: 0.6472986 Vali Loss: 0.3431096 Test Loss: 2.7381163
+Validation loss decreased (0.393103 --> 0.343110).  Saving model ...
+Updating learning rate to 2.5e-05
+Epoch: 4 cost time: 0.8450498580932617
+Epoch: 4, Steps: 18 | Train Loss: 0.6118363 Vali Loss: 0.3138913 Test Loss: 2.6680937
+Validation loss decreased (0.343110 --> 0.313891).  Saving model ...
+Updating learning rate to 1.25e-05
+Epoch: 5 cost time: 0.8477389812469482
+Epoch: 5, Steps: 18 | Train Loss: 0.6088061 Vali Loss: 0.2931795 Test Loss: 2.6495318
+Validation loss decreased (0.313891 --> 0.293179).  Saving model ...
+Updating learning rate to 6.25e-06
+Epoch: 6 cost time: 0.8441741466522217
+Epoch: 6, Steps: 18 | Train Loss: 0.5998119 Vali Loss: 0.3003621 Test Loss: 2.6334171
+EarlyStopping counter: 1 out of 3
+Updating learning rate to 3.125e-06
+Epoch: 7 cost time: 0.8410139083862305
+Epoch: 7, Steps: 18 | Train Loss: 0.5861565 Vali Loss: 0.2981582 Test Loss: 2.6253476
+EarlyStopping counter: 2 out of 3
+Updating learning rate to 1.5625e-06
+Epoch: 8 cost time: 0.8244013786315918
+Epoch: 8, Steps: 18 | Train Loss: 0.5868608 Vali Loss: 0.2876359 Test Loss: 2.6220284
+Validation loss decreased (0.293179 --> 0.287636).  Saving model ...
+Updating learning rate to 7.8125e-07
+Epoch: 9 cost time: 0.8585653305053711
+Epoch: 9, Steps: 18 | Train Loss: 0.5996013 Vali Loss: 0.2975533 Test Loss: 2.6219716
+EarlyStopping counter: 1 out of 3
+Updating learning rate to 3.90625e-07
+Epoch: 10 cost time: 0.8351914882659912
+Epoch: 10, Steps: 18 | Train Loss: 0.5840269 Vali Loss: 0.2693332 Test Loss: 2.6213875
+Validation loss decreased (0.287636 --> 0.269333).  Saving model ...
+Updating learning rate to 1.953125e-07
+Total training time: 14.8034 seconds
+>>>>>>>testing : ili_FEDformer_random_modes64_custom_ftM_sl36_ll18_pl36_dm512_nh8_el2_dl1_df2048_fc3_ebtimeF_dtTrue_Exp_0_seed25565<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+test 158
+test shape: (4, 32, 36, 7) (4, 32, 36, 7)
+test shape: (128, 36, 7) (128, 36, 7)
+mse:2.6213877201080322, mae:1.0620039701461792
