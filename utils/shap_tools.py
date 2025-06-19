@@ -2,12 +2,12 @@ import matplotlib.pyplot as plt
 import numpy as np
 plt.rcParams["font.family"] = "Times New Roman"
 
-def feature_attr_evolution(shap_values_list, input_seq_len, n_feat, feat_names=None, mode=1, pred_hor=0, out_feat=0, custom_cycler=None, grid=0, save=0, path=None, figsize=(12, 5), normalize=True):
+def ChronoSHAP(shap_values_list, input_seq_len, n_feat, feat_names=None, mode=1, pred_hor=0, out_feat=0, custom_cycler=None, grid=0, save=0, path=None, figsize=(12, 5), normalize=True):
     if feat_names==None:
         feat_names = range(n_feat)
         
     if mode==0:
-        print("Output mode")
+        print("Basic mode")
         fig, axis = plt.subplots(4,2,sharex=True, figsize=figsize) # (7, 9)
         for i in range(len(shap_values_list[pred_hor])):
             signal = shap_values_list[pred_hor][i].reshape((1, input_seq_len, n_feat)).squeeze()
@@ -37,7 +37,7 @@ def feature_attr_evolution(shap_values_list, input_seq_len, n_feat, feat_names=N
             axis[3,1].set_axis_off()
     
     elif mode==1:
-        print("Input/output mode")
+        print("ChronoSHAP")
 #       prediction horizon, output feature, feature impact (input time step, input feature)
         signals = np.asarray(shap_values_list).squeeze()
         signals = signals.reshape((signals.shape[0], signals.shape[1], input_seq_len, n_feat))

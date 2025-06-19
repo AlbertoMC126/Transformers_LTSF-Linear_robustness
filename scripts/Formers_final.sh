@@ -10,10 +10,12 @@ if [ ! -d "./logs/LongForecasting/Transformers" ]; then
     mkdir ./logs/LongForecasting/Transformers
 fi
 
+# Train each model 10 times with the 10 random seeds in paralel
+
 # Random seeds (10)
 # seeds=($RANDOM $RANDOM $RANDOM $RANDOM $RANDOM $RANDOM $RANDOM $RANDOM $RANDOM $RANDOM)
 
-# Same seeds as Linear models. These were the seeds used in the experiments. Use the line above to pick random seeds
+# Same seeds as Linear models
 seeds=(10458 15227 3293 12890 15726 28649 25565 3144 32598 15349)
 
 model_names="Autoformer Informer Transformer"
