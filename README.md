@@ -1,6 +1,8 @@
-# Unveiling the Limitations of Transformer Models in Time Series Forecasting
+# ChronoSHAP and Unveiling the Limitations of Transformer Models in Time Series Forecasting
 
 This repository reproduces and expands the LTSF-Linear code: "[Are Transformers Effective for Time Series Forecasting?](https://arxiv.org/pdf/2205.13504.pdf)" to study training robustness and stability of Transformers and LTSF-Linear models for time series forecasting. 
+
+Added: ChronoSHAP code and results
 
 ## Features
 - We provide with a deterministic approach for the training to improve reproducibility that allows user to work directly with seeds in the Shell scripts. 
